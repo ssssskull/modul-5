@@ -1,2 +1,2 @@
-# modul-5
-Projekt 5: Digitalt indhold
+# Modul 5
+Digitalt indhold
