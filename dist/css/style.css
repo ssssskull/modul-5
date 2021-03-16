@@ -1,0 +1,60 @@
+@-ms-viewport {
+  orientation: portrait;
+}
+
+@-o-viewport {
+  orientation: portrait;
+}
+
+@viewport {
+  orientation: portrait;
+}
+
+html {
+  background-color: #EBEBE2;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+@media (min-width: 40em) {
+  h2 {
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+/*# sourceMappingURL=style.css.map */

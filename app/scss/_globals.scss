@@ -1,0 +1,47 @@
+@viewport {
+    orientation: portrait;
+}
+
+html {
+    background-color: $clr-background;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+// List styles
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+// Typography
+p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-size: $font-xs-fallback;
+    font-size: $font-xs;
+}
+
+h1 {
+    font-size:  $font-l-fallback;
+    font-size:  $font-l;
+}
+
+h2 {
+    font-size: $font-med-fallback;
+    font-size: $font-med;
+    @include breakpoint-up(ipad){
+        font-size: 25px;
+        font-size: 2.5rem;
+    }
+}
+h3 {
+    font-size: $font-sm-fallback;
+    font-size: $font-sm;
+}
