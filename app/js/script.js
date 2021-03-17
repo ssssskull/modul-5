@@ -4,7 +4,7 @@ var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         //TODO tilføj flere barcharts der tilhører 1 label https://jsfiddle.net/ytkqwL9x/1/ --> https://stackoverflow.com/questions/44284889/chartjs-multiple-barcharts-corresponding-to-one-label
-        labels: ['18 - 24', '25 - 34', '35 - 44', '45 - 54', '55 - 64', '65 - 74', '75 eller ældre'],
+        labels: ['18 - 24 år', '25 - 34 år', '35 - 44 år', '45 - 54 år', '55 - 64 år', '65 - 74 år', '75 år eller ældre'],
         datasets: [{
             data: [34.8, 26.5, 19.9, 22.1, 14.8, 18.5, 19.2],
             backgroundColor: [
@@ -44,7 +44,6 @@ var myChart = new Chart(ctx, {
             fontSize: 22
         },
         tooltips: {
-
             backgroundColor: ['#FEFEFE'],
             bodyFontColor: ['#000000'],
             titleFontColor: ['#000000'],
