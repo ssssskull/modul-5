@@ -6,48 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Selvmordsforebyggelse</title>
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Selvmordsforebyggelse - til patienter og pårørende"
-    />
+    <meta name="description" content="Selvmordsforebyggelse - til patienter og pårørende"/>
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/mro3ydc.css" />
   </head>
-
   <body>
-    <header class="header container--pall">
-      <nav class="container flex flex-jc-sb flex-ai-c">
+    <header class="header">
+      <div class="overlay"></div>
+      <nav class="container flex flex-jc-sb flex-ai-c container--pall">
         <div class="header__left flex flex-ai-c">
           <a class="header__logo" href="#" title="Region Syddanmark"></a>
-          <a href="tel:99448600" tabindex="0" title="Ring til os"
-            >Ring til os</a
-          >
+          <a class="hide-for-mobile" href="tel:99448600" tabindex="0" title="Ring til os">Ring til os</a>
         </div>
-        <a id="btnHamburger" href="!#" class="header__toggle hide-for-desktop">
+        <a id="btnHamburger" href="#" class="header__toggle flex hide-for-desktop flex flex-ai-c">
           <span></span>
         </a>
         <ul class="header__right flex hide-for-mobile">
-          <li>
-            <a href="#!" tabindex="0" title="Forside">Forside</a>
-          </li>
-          <li>
-            <a href="#!" tabindex="0" title="Lær os at kende"
-              >Lær os at kende</a
-            >
-          </li>
+          <li><a href="#!" tabindex="0" title="Forside">Forside</a></li>
+          <li><a href="#!" tabindex="0" title="Lær os at kende">Lær os at kende</a></li>
           <li><a href="#!" tabindex="0" title="Udtalelser">Udtalelser</a></li>
           <li><a href="#!" tabindex="0" title="Kontakt">Kontakt</a></li>
         </ul>
       </nav>
-      <ul class="header__menu hide-for-desktop">
+      <ul class="header__menu hide-for-desktop container--py">
         <li><a href="#!" tabindex="0" title="Forside">Forside</a></li>
         <li>
           <a href="#!" tabindex="0" title="Lær os at kende">Lær os at kende</a>
         </li>
         <li><a href="#!" tabindex="0" title="Udtalelser">Udtalelser</a></li>
         <li><a href="#!" tabindex="0" title="Kontakt">Kontakt</a></li>
-        <li><a href="#!" tabindex="0" title="Ring til os">Ring til os</a></li>
+        <li><a class="flex flex-ai-c" href="#!" tabindex="0" title="Ring til os">Ring til os</a></li>
       </ul>
     </header>
     <main></main>

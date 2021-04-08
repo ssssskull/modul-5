@@ -54,10 +54,10 @@ h3 {
 }
 
 .container--pall {
-  padding-top: 4.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 4.5rem;
-  padding-left: 1.5rem;
+  padding-top: 3rem;
+  padding-right: 2.4rem;
+  padding-bottom: 3rem;
+  padding-left: 2.4rem;
 }
 
 @media (min-width: 64em) {
@@ -68,8 +68,8 @@ h3 {
 }
 
 .container--py {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 @media (min-width: 64em) {
@@ -80,8 +80,8 @@ h3 {
 }
 
 .container--px {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
 }
 
 .flex {
@@ -121,10 +121,6 @@ h3 {
   }
 }
 
-.hide-for-desktop {
-  display: none;
-}
-
 @media (min-width: 64em) {
   .hide-for-desktop {
     display: none;
@@ -133,9 +129,6 @@ h3 {
 
 .header {
   background-color: #8e3e4e;
-  border: 1px solid green;
-  padding-top: 1.7rem;
-  padding-bottom: 1.7rem;
 }
 
 .header nav {
@@ -143,6 +136,8 @@ h3 {
   font-size: 1.8rem;
   font-weight: 500;
   color: #faf6f4;
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
 }
 
 .header__logo {
@@ -156,5 +151,118 @@ h3 {
 
 .header__right li:not(:last-child) {
   margin-right: 5.5rem;
+}
+
+.header__toggle {
+  height: 24px;
+}
+
+.header__toggle span,
+.header__toggle > span::before,
+.header__toggle > span::after {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #faf6f4;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.header__toggle span {
+  position: relative;
+  will-change: opacity;
+}
+
+.header__toggle span::before, .header__toggle span::after {
+  content: "";
+  position: absolute;
+  will-change: transform;
+}
+
+.header__toggle span::before {
+  top: -8px;
+}
+
+.header__toggle span::after {
+  top: 8px;
+}
+
+.header__menu {
+  visibility: hidden;
+  position: absolute;
+  width: calc(100% - 5rem);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #faf6f4;
+  margin-top: 1.7rem;
+  border-radius: 5px;
+}
+
+.header.open .header__menu {
+  visibility: visible;
+}
+
+.header.open .header__menu li {
+  padding: 1.5rem;
+}
+
+.header.open .header__menu li:last-child a {
+  background-color: #8e3e4e;
+  padding: 1.1rem 2.4rem;
+  border-radius: 24px;
+  color: #faf6f4;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.header.open .header__menu li:last-child a::before {
+  display: block;
+  content: "";
+  background-image: url("../../images/icons/phone.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 16px;
+  height: 16px;
+  padding-right: 0.5rem;
+}
+
+.header.open .header__menu li a {
+  color: #5A6175;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.header.open .header__menu > * {
+  text-align: center;
+}
+
+.header.open .header__toggle > span {
+  background-color: transparent;
+}
+
+.header.open .header__toggle > span::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+.header.open .header__toggle > span::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+}
+
+.header.open .overlay {
+  opacity: 0.5;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #000;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */
