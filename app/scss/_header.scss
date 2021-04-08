@@ -1,1 +1,27 @@
-//tbd
+.header {
+  background-color: $clr-solid-pink;
+  border: 1px solid green;
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
+
+  nav {
+    font-size: $font-sm-fallback;
+    font-size: $font-sm;
+    font-weight: 500;
+    color: $clr-dawn-pink;
+  }
+  &__logo {
+    display: block;
+    width: 120px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-image: url("../../images/Region-Syddanmark-logo.svg");
+    margin-right: 5.5rem;
+  }
+
+  &__right {
+    li:not(:last-child) {
+      margin-right: 5.5rem;
+    }
+  }
+}

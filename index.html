@@ -1,42 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Selvmordsforebyggelse</title>
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Selvmordsforebyggelse - til patienter og pårørende">
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <link rel="stylesheet" href="dist/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700" rel="stylesheet">
-</head>
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Selvmordsforebyggelse - til patienter og pårørende"
+    />
+    <link rel="stylesheet" href="dist/css/reset.css" />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/mro3ydc.css" />
+  </head>
 
-<body>
-    <header class="header">
-        <div class="header__container">
-            <a id="logoHome" class="header__logo" href="#" title="Selvmordsforebyggelse logo"></a>
-            <div class="nav">
-                <a class="header__logo" href="#" title="Selvmordsforebyggelse"></a>
-                <ul class="header__menu">
-                    <li><a href="#!" tabindex="0" title="Om">Om</a></li>
-                    <li><a href="#!" tabindex="0" title="Viden">Viden</a></li>
-                    <li><a href="#!" tabindex="0" title="Kontakt">Kontakt</a></li>
-                </ul>
-            </div>
+  <body>
+    <header class="header container--pall">
+      <nav class="container flex flex-jc-sb flex-ai-c">
+        <div class="header__left flex flex-ai-c">
+          <a class="header__logo" href="#" title="Region Syddanmark"></a>
+          <a href="tel:99448600" tabindex="0" title="Ring til os"
+            >Ring til os</a
+          >
         </div>
+        <a id="btnHamburger" href="!#" class="header__toggle hide-for-desktop">
+          <span></span>
+        </a>
+        <ul class="header__right flex hide-for-mobile">
+          <li>
+            <a href="#!" tabindex="0" title="Forside">Forside</a>
+          </li>
+          <li>
+            <a href="#!" tabindex="0" title="Lær os at kende"
+              >Lær os at kende</a
+            >
+          </li>
+          <li><a href="#!" tabindex="0" title="Udtalelser">Udtalelser</a></li>
+          <li><a href="#!" tabindex="0" title="Kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <ul class="header__menu hide-for-desktop">
+        <li><a href="#!" tabindex="0" title="Forside">Forside</a></li>
+        <li>
+          <a href="#!" tabindex="0" title="Lær os at kende">Lær os at kende</a>
+        </li>
+        <li><a href="#!" tabindex="0" title="Udtalelser">Udtalelser</a></li>
+        <li><a href="#!" tabindex="0" title="Kontakt">Kontakt</a></li>
+        <li><a href="#!" tabindex="0" title="Ring til os">Ring til os</a></li>
+      </ul>
     </header>
-    <main>
-        <div class="canvas-container">
-            <h2>Procentdel af voksne der har været mere deprimeret på grund af COVID-19</h2>
-            <!-- TODO tilføj titel udenfor canvas elementet for at gøre teksten responsiv -->
-            <canvas id="myChart"></canvas>
-        </div>
-    </main>
+    <main></main>
     <script src="app/js/script.js" defer></script>
-</body>
-
+  </body>
 </html>

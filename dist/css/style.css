@@ -11,30 +11,19 @@
 }
 
 html {
-  background-color: #EBEBE2;
+  background-color: #8e3e4e;
   font-size: 62.5%;
-  font-family: 'Raleway', sans-serif;
+  font-family: interstate, sans-serif;
 }
 
-*, *::before, *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-p, h1, h2, h3 {
-  margin: 0;
-  padding: 0;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 p {
-  font-size: 15px;
-  font-size: 1.5rem;
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 h1 {
@@ -43,8 +32,8 @@ h1 {
 }
 
 h2 {
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 @media (min-width: 40em) {
@@ -59,15 +48,113 @@ h3 {
   font-size: 1.8rem;
 }
 
-.canvas-container {
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container--pall {
+  padding-top: 4.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 4.5rem;
+  padding-left: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.container--py {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex-dr-cl {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 700px;
-  height: 400px;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  display: none;
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header {
+  background-color: #8e3e4e;
+  border: 1px solid green;
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
+}
+
+.header nav {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #faf6f4;
+}
+
+.header__logo {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-image: url("../../images/Region-Syddanmark-logo.svg");
+  margin-right: 5.5rem;
+}
+
+.header__right li:not(:last-child) {
+  margin-right: 5.5rem;
 }
 /*# sourceMappingURL=style.css.map */
