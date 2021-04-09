@@ -1,0 +1,23 @@
+.hero {
+  height: 100vh;
+  color: $clr-dawn-pink;
+
+  &__container {
+    height: 92vh;
+    width: 100%;
+    p:last-of-type {
+      margin-bottom: 5rem;
+    }
+    a {
+      margin: unset;
+    }
+  }
+  &__content {
+    width: 100%;
+    max-width: 50%;
+  }
+  &__scroll {
+    background-color: $clr-dawn-pink;
+    height: 8vh;
+  }
+}

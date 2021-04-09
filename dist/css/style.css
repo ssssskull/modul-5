@@ -24,11 +24,14 @@ a {
 p {
   font-size: 14px;
   font-size: 1.4rem;
+  line-height: 1.5;
 }
 
 h1 {
   font-size: 30px;
   font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
 }
 
 h2 {
@@ -46,6 +49,60 @@ h2 {
 h3 {
   font-size: 18px;
   font-size: 1.8rem;
+}
+
+.cta-secondary {
+  background-color: #8e3e4e;
+  padding: 1.1rem 2.4rem;
+  border-radius: 24px;
+  color: #faf6f4;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+
+.cta-secondary--outline {
+  color: #faf6f4;
+  border: 1px solid #faf6f4;
+  display: none;
+}
+
+@media (min-width: 64em) {
+  .cta-secondary--outline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.cta-secondary::before {
+  display: block;
+  content: "";
+  background-image: url("../../images/icons/phone.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 16px;
+  height: 16px;
+  padding-right: 0.5rem;
+}
+
+.cta-secondary--white {
+  background-color: #faf6f4;
+  color: #5A6175;
+  font-weight: 500;
+}
+
+.cta-secondary--white::before {
+  background-image: url("../../images/icons/phone-black.svg");
+  padding-right: 1rem;
+}
+
+@media (min-width: 64em) {
+  .cta-secondary--white {
+    font-size: 2.2rem;
+  }
 }
 
 .container {
@@ -115,6 +172,12 @@ h3 {
           align-items: center;
 }
 
+.flex-ai-st {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
     display: none;
@@ -129,6 +192,8 @@ h3 {
 
 .header {
   background-color: #8e3e4e;
+  position: absolute;
+  width: 100%;
 }
 
 .header nav {
@@ -138,6 +203,13 @@ h3 {
   color: #faf6f4;
   padding-top: 1.7rem;
   padding-bottom: 1.7rem;
+}
+
+@media (min-width: 64em) {
+  .header nav {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
 }
 
 .header__logo {
@@ -164,8 +236,8 @@ h3 {
   width: 26px;
   height: 3px;
   background-color: #faf6f4;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .header__toggle span {
@@ -208,25 +280,7 @@ h3 {
 }
 
 .header.open .header__menu li:last-child a {
-  background-color: #8e3e4e;
-  padding: 1.1rem 2.4rem;
-  border-radius: 24px;
   color: #faf6f4;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 auto;
-}
-
-.header.open .header__menu li:last-child a::before {
-  display: block;
-  content: "";
-  background-image: url("../../images/icons/phone.svg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 16px;
-  height: 16px;
-  padding-right: 0.5rem;
 }
 
 .header.open .header__menu li a {
@@ -264,5 +318,33 @@ h3 {
   left: 0px;
   background-color: #000;
   z-index: -1;
+}
+
+.hero {
+  height: 100vh;
+  color: #faf6f4;
+}
+
+.hero__container {
+  height: 92vh;
+  width: 100%;
+}
+
+.hero__container p:last-of-type {
+  margin-bottom: 5rem;
+}
+
+.hero__container a {
+  margin: unset;
+}
+
+.hero__content {
+  width: 100%;
+  max-width: 50%;
+}
+
+.hero__scroll {
+  background-color: #faf6f4;
+  height: 8vh;
 }
 /*# sourceMappingURL=style.css.map */
