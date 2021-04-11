@@ -18,6 +18,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background-color: #8e3e4e;
   font-size: 62.5%;
   font-family: interstate, sans-serif;
@@ -247,6 +248,10 @@ h3 {
 
 .header__right li:not(:last-child) {
   margin-right: 5.5rem;
+}
+
+.header__right .active {
+  border-bottom: 2px solid #faf6f4;
 }
 
 .header__toggle {
