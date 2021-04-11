@@ -2,6 +2,12 @@
   orientation: portrait;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html {
   background-color: $clr-solid-pink;
   font-size: 62.5%;
@@ -26,6 +32,11 @@ h1 {
   font-size: $font-l;
   font-weight: 500;
   margin-bottom: 5rem;
+
+  @include breakpoint-up(computer) {
+    font-size: $font-xl-fallback;
+    font-size: $font-xl;
+  }
 }
 
 h2 {
@@ -54,7 +65,7 @@ h3 {
 
   &--outline {
     color: $clr-dawn-pink;
-    border: 1px solid $clr-dawn-pink;
+    border: 2px solid $clr-dawn-pink;
     display: none;
 
     @include breakpoint-up(computer) {
@@ -81,10 +92,6 @@ h3 {
       background-image: url("../../images/icons/phone-black.svg");
       padding-right: 1rem;
     }
-
-    @include breakpoint-up(computer) {
-      font-size: 2.2rem;
-    }
   }
 }
 
@@ -100,8 +107,10 @@ h3 {
     padding-left: 2.4rem;
 
     @include breakpoint-up(computer) {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
     }
   }
 

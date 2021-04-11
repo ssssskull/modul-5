@@ -10,6 +10,13 @@
   orientation: portrait;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 html {
   background-color: #8e3e4e;
   font-size: 62.5%;
@@ -32,6 +39,13 @@ h1 {
   font-size: 3rem;
   font-weight: 500;
   margin-bottom: 5rem;
+}
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 42px;
+    font-size: 4.2rem;
+  }
 }
 
 h2 {
@@ -65,7 +79,7 @@ h3 {
 
 .cta-secondary--outline {
   color: #faf6f4;
-  border: 1px solid #faf6f4;
+  border: 2px solid #faf6f4;
   display: none;
 }
 
@@ -90,19 +104,13 @@ h3 {
 
 .cta-secondary--white {
   background-color: #faf6f4;
-  color: #5A6175;
+  color: #5a6175;
   font-weight: 500;
 }
 
 .cta-secondary--white::before {
   background-image: url("../../images/icons/phone-black.svg");
   padding-right: 1rem;
-}
-
-@media (min-width: 64em) {
-  .cta-secondary--white {
-    font-size: 2.2rem;
-  }
 }
 
 .container {
@@ -119,8 +127,10 @@ h3 {
 
 @media (min-width: 64em) {
   .container--pall {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
@@ -192,8 +202,13 @@ h3 {
 
 .header {
   background-color: #8e3e4e;
-  position: absolute;
+  position: fixed;
+  /* Make it stick/fixed */
+  top: 0;
+  /* Stay on top */
   width: 100%;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
 }
 
 .header nav {
@@ -207,8 +222,8 @@ h3 {
 
 @media (min-width: 64em) {
   .header nav {
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
   }
 }
 
@@ -284,7 +299,7 @@ h3 {
 }
 
 .header.open .header__menu li a {
-  color: #5A6175;
+  color: #5a6175;
   font-size: 1.4rem;
   font-weight: 500;
 }
@@ -326,25 +341,73 @@ h3 {
 }
 
 .hero__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
   height: 92vh;
   width: 100%;
+  background-image: url("../../images/Region-Syddanmark-hero-baggrund.png");
+  background-position: center center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding-top: 7.4rem;
+}
+
+@media (min-width: 40em) {
+  .hero__container {
+    background-size: 70% auto;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__container {
+    text-align: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 8rem;
+    background-size: 45% auto;
+    background-position: right 70%;
+  }
 }
 
 .hero__container p:last-of-type {
   margin-bottom: 5rem;
 }
 
-.hero__container a {
-  margin: unset;
+@media (min-width: 64em) {
+  .hero__container a {
+    margin: unset;
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+
+.hero__title {
+  padding-top: 5rem;
+  width: 100%;
 }
 
 .hero__content {
   width: 100%;
-  max-width: 50%;
+}
+
+@media (min-width: 64em) {
+  .hero__content > * {
+    max-width: 50%;
+  }
+}
+
+.hero__content a::before {
+  display: none;
 }
 
 .hero__scroll {
   background-color: #faf6f4;
   height: 8vh;
+}
+
+main {
+  height: 700px;
 }
 /*# sourceMappingURL=style.css.map */

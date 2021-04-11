@@ -1,7 +1,9 @@
 .header {
   background-color: $clr-solid-pink;
-  position: absolute;
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
   width: 100%;
+  transition: top 0.3s;
 
   nav {
     font-size: $font-sm-fallback;
@@ -12,8 +14,8 @@
     padding-bottom: 1.7rem;
 
     @include breakpoint-up(computer) {
-      padding-top: 4.5rem;
-      padding-bottom: 4.5rem;
+      padding-top: 2.4rem;
+      padding-bottom: 2.4rem;
     }
   }
   &__logo {
