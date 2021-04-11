@@ -18,7 +18,6 @@
       background-size: 70% auto;
     }
     //TODO måske lav en query til 1280px skærme og mere padding der?
-    //TODO måske lidt mere padding på y aksen på ipad
     @include breakpoint-up(computer) {
       text-align: unset;
       justify-content: center;
@@ -28,7 +27,10 @@
     }
 
     p:last-of-type {
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
+      @include breakpoint-up(ipad) {
+        margin-bottom: 5rem;
+      }
     }
     a {
       @include breakpoint-up(computer) {
@@ -58,6 +60,18 @@
   &__scroll {
     background-color: $clr-dawn-pink;
     height: 8vh;
+
+    a {
+      display: block;
+      background-image: url("../../images/icons/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: 50% 50%;
+      background-position: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: lightgrey;
+      border-radius: 50%;
+    }
   }
 }
 

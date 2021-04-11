@@ -42,14 +42,20 @@ h1 {
 h2 {
   font-size: $font-med-fallback;
   font-size: $font-med;
+  margin-bottom: 2rem;
   @include breakpoint-up(ipad) {
     font-size: 25px;
     font-size: 2.5rem;
+    margin-bottom: 3rem;
   }
 }
 h3 {
   font-size: $font-sm-fallback;
   font-size: $font-sm;
+  margin-bottom: 2rem;
+  @include breakpoint-up(ipad) {
+    margin-bottom: 3rem;
+  }
 }
 
 // Buttons
@@ -106,7 +112,7 @@ h3 {
     padding-bottom: 3rem;
     padding-left: 2.4rem;
 
-    @include breakpoint-up(computer) {
+    @include breakpoint-up(ipad) {
       padding-top: 5rem;
       padding-bottom: 5rem;
       padding-left: 4rem;
@@ -118,7 +124,7 @@ h3 {
     padding-top: 3rem;
     padding-bottom: 3rem;
 
-    @include breakpoint-up(computer) {
+    @include breakpoint-up(ipad) {
       padding-top: 6rem;
       padding-bottom: 6rem;
     }
