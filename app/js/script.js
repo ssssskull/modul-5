@@ -56,11 +56,12 @@ window.onscroll = function () {
 //   checkedBox[0].classList.toggle("checkedbox")
 // }
 
-const udtalelser = document.querySelectorAll(".udtalelsernav")
-const boks = document.querySelectorAll(".tbr")
+const udtalelser = document.querySelectorAll(".udtalelsernav");
+const boks = Array.from(document.querySelectorAll(".tbr"));
+boks.forEach(add)
 
 udtalelser.forEach(udtalelsernav => udtalelsernav.addEventListener("click", add));
-function add(e) {
-  
+for(let i = 0; i < udtalelser.length; i++) {
+  boks.classList.add("tba")
 }
 
