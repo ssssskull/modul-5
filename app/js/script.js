@@ -29,3 +29,17 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+/* Toggle checkedbox-class */
+const udtalelser = Array.from(document.querySelectorAll(".item"));
+for(let i = 0; i < udtalelser.length; i++) {
+  ;
+}
+
+
+
+
+// function toggleCheckedbox() {
+//   var checkedBox = document.getElementsByClassName("item");
+//   checkedBox[0].classList.toggle("checkedbox")
+// }
