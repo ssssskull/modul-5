@@ -31,10 +31,22 @@ window.onscroll = function () {
 };
 
 /* Toggle checkedbox-class */
-const udtalelser = Array.from(document.querySelectorAll(".item"));
-for(let i = 0; i < udtalelser.length; i++) {
-  ;
-}
+
+// const items = document.querySelectorAll(".item")
+
+// function handleClick(_e) {
+//   items.classList.remove("tbr")
+//   items.classList.add("tba")
+// }
+
+
+// const udtalelser = document.querySelectorAll(".udtalelsernav")
+
+// udtalelser.forEach(udtalelsernav => udtalelsernav.addEventListener("click", handleClick));
+// const udtalelser = Array.from(document.querySelectorAll(".item"));
+// for(let i = 0; i < udtalelser.length; i++) {
+
+// }
 
 
 
@@ -43,3 +55,12 @@ for(let i = 0; i < udtalelser.length; i++) {
 //   var checkedBox = document.getElementsByClassName("item");
 //   checkedBox[0].classList.toggle("checkedbox")
 // }
+
+const udtalelser = document.querySelectorAll(".udtalelsernav")
+const boks = document.querySelectorAll(".tbr")
+
+udtalelser.forEach(udtalelsernav => udtalelsernav.addEventListener("click", add));
+function add(e) {
+  
+}
+

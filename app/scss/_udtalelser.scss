@@ -2,8 +2,16 @@
     background: $clr-dawn-pink;
 }
 
-.pudtalelser {
+.p-udtalelser {
     padding: 30% 15%;
+}
+
+.radiobuttons {
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
 }
   
   main#carousel {
@@ -27,12 +35,6 @@
     width: 300px;
     height: 400px;
     background-color: lightgray;
-    --r: calc(var(--position) - var(--offset));
-    --abs: max(calc(var(--r) * -1), var(--r));
-    transition: all 0.25s linear;
-    transform: rotateY(calc(-12deg * var(--r)))
-      translateX(calc(-375px * var(--r)));
-    z-index: calc((var(--position) - var(--abs)));
     border-radius: 15%;
   }
   
@@ -92,8 +94,18 @@
     --position: 5;
   }
 
-  .item.checkedbox {
-    transform: rotateY(calc( 
--12deg
- * var(--r))) translateX(calc(-375px * var(--r))) translateY(-20px);
+  .item.tbr {
+    transform: rotateY(calc(-12deg * var(--r))) translateX(calc(-375px * var(--r)));
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    z-index: calc((var(--position) - var(--abs)));
+  }
+
+  .item.tba {
+    transform: rotateY(calc(-12deg * var(--r))) translateX(calc(-375px * var(--r))) translateY(30px);
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    z-index: calc((var(--position) - var(--abs)));
   }
