@@ -26,6 +26,10 @@ p {
   font-size: $font-xs-fallback;
   font-size: $font-xs;
   line-height: 1.5;
+  @include breakpoint-up(ipad) {
+    font-size: $font-sm-fallback;
+    font-size: $font-sm;
+  }
 }
 
 h1 {
@@ -41,6 +45,7 @@ h1 {
 }
 
 h2 {
+  font-weight: 700;
   font-size: $font-med-fallback;
   font-size: $font-med;
   margin-bottom: 2rem;
