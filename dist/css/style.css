@@ -10,7 +10,15 @@
   orientation: portrait;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 html {
+  scroll-behavior: smooth;
   background-color: #8e3e4e;
   font-size: 62.5%;
   font-family: interstate, sans-serif;
@@ -24,28 +32,103 @@ a {
 p {
   font-size: 14px;
   font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 40em) {
+  p {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
 }
 
 h1 {
   font-size: 30px;
   font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 42px;
+    font-size: 4.2rem;
+  }
 }
 
 h2 {
+  font-weight: 700;
   font-size: 24px;
   font-size: 2.4rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 40em) {
   h2 {
     font-size: 25px;
     font-size: 2.5rem;
+    margin-bottom: 3rem;
   }
 }
 
 h3 {
   font-size: 18px;
   font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 40em) {
+  h3 {
+    margin-bottom: 3rem;
+  }
+}
+
+.cta-secondary {
+  background-color: #8e3e4e;
+  padding: 1.1rem 2.4rem;
+  border-radius: 24px;
+  color: #faf6f4;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  font-size: 1.4rem;
+}
+
+.cta-secondary--outline {
+  color: #faf6f4;
+  border: 2px solid #faf6f4;
+  display: none;
+}
+
+@media (min-width: 64em) {
+  .cta-secondary--outline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.cta-secondary::before {
+  display: block;
+  content: "";
+  background-image: url("../../images/icons/phone.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 16px;
+  height: 16px;
+  padding-right: 0.5rem;
+}
+
+.cta-secondary--white {
+  background-color: #faf6f4;
+  color: #5a6175;
+  font-weight: 500;
+}
+
+.cta-secondary--white::before {
+  background-image: url("../../images/icons/phone-black.svg");
+  padding-right: 1rem;
 }
 
 .container {
@@ -60,10 +143,12 @@ h3 {
   padding-left: 2.4rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .container--pall {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
@@ -72,7 +157,7 @@ h3 {
   padding-bottom: 3rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .container--py {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -115,6 +200,12 @@ h3 {
           align-items: center;
 }
 
+.flex-ai-st {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
     display: none;
@@ -129,6 +220,13 @@ h3 {
 
 .header {
   background-color: #8e3e4e;
+  position: fixed;
+  /* Make it stick/fixed */
+  top: 0;
+  /* Stay on top */
+  width: 100%;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
 }
 
 .header nav {
@@ -138,6 +236,13 @@ h3 {
   color: #faf6f4;
   padding-top: 1.7rem;
   padding-bottom: 1.7rem;
+}
+
+@media (min-width: 64em) {
+  .header nav {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
 }
 
 .header__logo {
@@ -153,6 +258,10 @@ h3 {
   margin-right: 5.5rem;
 }
 
+.header__right .active {
+  border-bottom: 2px solid #faf6f4;
+}
+
 .header__toggle {
   height: 24px;
 }
@@ -164,8 +273,8 @@ h3 {
   width: 26px;
   height: 3px;
   background-color: #faf6f4;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .header__toggle span {
@@ -208,29 +317,11 @@ h3 {
 }
 
 .header.open .header__menu li:last-child a {
-  background-color: #8e3e4e;
-  padding: 1.1rem 2.4rem;
-  border-radius: 24px;
   color: #faf6f4;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 auto;
-}
-
-.header.open .header__menu li:last-child a::before {
-  display: block;
-  content: "";
-  background-image: url("../../images/icons/phone.svg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 16px;
-  height: 16px;
-  padding-right: 0.5rem;
 }
 
 .header.open .header__menu li a {
-  color: #5A6175;
+  color: #5a6175;
   font-size: 1.4rem;
   font-weight: 500;
 }
@@ -264,5 +355,115 @@ h3 {
   left: 0px;
   background-color: #000;
   z-index: -1;
+}
+
+.hero {
+  height: 100vh;
+  color: #faf6f4;
+}
+
+.hero__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  height: 92vh;
+  width: 100%;
+  background-image: url("../../images/Region-Syddanmark-hero-baggrund.png");
+  background-position: center center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding-top: 7.4rem;
+}
+
+@media (min-width: 40em) {
+  .hero__container {
+    background-size: 70% auto;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__container {
+    text-align: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 8rem;
+    background-size: 45% auto;
+    background-position: right 70%;
+  }
+}
+
+.hero__container p:last-of-type {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 40em) {
+  .hero__container p:last-of-type {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__container a {
+    margin: unset;
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+
+.hero__title {
+  padding-top: 5rem;
+  width: 100%;
+}
+
+.hero__content {
+  width: 100%;
+}
+
+@media (min-width: 64em) {
+  .hero__content > * {
+    max-width: 50%;
+  }
+}
+
+.hero__content a::before {
+  display: none;
+}
+
+.hero__scroll {
+  background-color: #faf6f4;
+  height: 8vh;
+}
+
+.hero__scroll a {
+  display: block;
+  background-image: url("../../images/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: lightgrey;
+  border-radius: 50%;
+}
+
+main {
+  height: 700px;
+}
+
+main {
+  text-align: center;
+  color: #5a6175;
+}
+
+main h2,
+main h3,
+main p,
+main img {
+  max-width: 850px;
+}
+
+.aboutus {
+  background: #faf6f4;
 }
 /*# sourceMappingURL=style.css.map */

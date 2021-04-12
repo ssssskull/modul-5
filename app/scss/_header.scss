@@ -1,5 +1,9 @@
 .header {
   background-color: $clr-solid-pink;
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%;
+  transition: top 0.3s;
 
   nav {
     font-size: $font-sm-fallback;
@@ -8,6 +12,11 @@
     color: $clr-dawn-pink;
     padding-top: 1.7rem;
     padding-bottom: 1.7rem;
+
+    @include breakpoint-up(computer) {
+      padding-top: 2.4rem;
+      padding-bottom: 2.4rem;
+    }
   }
   &__logo {
     display: block;
@@ -22,6 +31,10 @@
     li:not(:last-child) {
       margin-right: 5.5rem;
     }
+    .active {
+      border-bottom: 2px solid $clr-dawn-pink;
+      //TODO tilføj js til dynamisk aktiv menu
+    }
   }
 
   &__toggle {
@@ -34,7 +47,7 @@
       width: 26px;
       height: 3px;
       background-color: $clr-dawn-pink;
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
     span {
       position: relative;
@@ -68,7 +81,6 @@
     border-radius: 5px;
 
     //TODO fix transition
-
   }
 
   // Hamburger Open Styles
@@ -76,38 +88,20 @@
     .header__menu {
       visibility: visible;
 
-
       li {
         padding: 1.5rem;
 
         &:last-child {
           a {
-            background-color: $clr-solid-pink;
-            padding: 1.1rem 2.4rem;
-            border-radius: 24px;
             color: $clr-dawn-pink;
-            width: max-content;
-            margin: 0 auto;
-
-            &::before {
-              display: block;
-              content: "";
-              background-image: url("../../images/icons/phone.svg");
-              background-repeat: no-repeat;
-              background-size: 100% 100%;
-              width: 16px;
-              height: 16px;
-              padding-right: 0.5rem;
-            }
           }
         }
+
         a {
           color: $clr-text;
           font-size: 1.4rem;
           font-weight: 500;
         }
-
-
       }
 
       > * {
