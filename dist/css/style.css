@@ -453,113 +453,121 @@ main img {
   padding: 30% 15%;
 }
 
-.radiobuttons {
-  display: grid;
-  grid-template-rows: 500px 100px;
-  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
-  align-items: center;
-  justify-items: center;
+.gallery {
+  width: 100%;
 }
 
-main#carousel {
-  grid-row: 1 / 2;
-  grid-column: 1 / 8;
-  width: 100vw;
-  height: 500px;
+.gallery-container {
+  align-items: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  perspective: 100000px;
-  --items: 5;
-  --middle: 3;
-  --position: 1;
-  pointer-events: none;
-}
-
-.item {
-  position: absolute;
-  width: 300px;
   height: 400px;
-  background-color: lightgray;
-  border-radius: 15%;
-  transform: rotateY(calc(-12deg * var(--r))) translateX(calc(-375px * var(--r)));
-  --r: calc(var(--position) - var(--offset));
-  --abs: max(calc(var(--r) * -1), var(--r));
-  transition: all .5s ease-in-out;
-  z-index: calc((var(--position) - var(--abs)));
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
 }
 
-.item:nth-of-type(1) {
-  --offset: 1;
+.gallery-item {
+  height: 150px;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  width: 150px;
+  z-index: 0;
 }
 
-.item:nth-of-type(2) {
-  --offset: 2;
+.gallery-item {
+  height: 300px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
 }
 
-.item:nth-of-type(3) {
-  --offset: 3;
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
 }
 
-.item:nth-of-type(4) {
-  --offset: 4;
+.gallery-controls button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 20px;
+  padding: 0 12px;
+  text-transform: capitalize;
 }
 
-.item:nth-of-type(5) {
-  --offset: 5;
+.gallery-controls button:focus {
+  outline: none;
 }
 
-input:nth-of-type(1) {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+.gallery-controls-previous {
+  position: relative;
 }
 
-input:nth-of-type(1):checked ~ main#carousel {
-  --position: 1;
+.gallery-controls-previous::before {
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  content: '';
+  display: inline-block;
+  height: 4px;
+  left: -10px;
+  padding: 2px;
+  position: absolute;
+  top: 0;
+  transform: rotate(135deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 4px;
 }
 
-input:nth-of-type(2) {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
+.gallery-controls-previous:hover::before {
+  left: -18px;
 }
 
-input:nth-of-type(2):checked ~ main#carousel {
-  --position: 2;
+.gallery-controls-next {
+  position: relative;
 }
 
-input:nth-of-type(3) {
-  grid-column: 4 /5;
-  grid-row: 2 / 3;
+.gallery-controls-next::before {
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  content: '';
+  display: inline-block;
+  height: 4px;
+  padding: 2px;
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: right 0.15s ease-in-out;
+  width: 4px;
 }
 
-input:nth-of-type(3):checked ~ main#carousel {
-  --position: 3;
+.gallery-controls-next:hover::before {
+  right: -18px;
 }
 
-input:nth-of-type(4) {
-  grid-column: 5 / 6;
-  grid-row: 2 / 3;
+.gallery-nav {
+  bottom: -15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  width: 100%;
 }
 
-input:nth-of-type(4):checked ~ main#carousel {
-  --position: 4;
+.gallery-nav li {
+  background: #ccc;
+  border-radius: 50%;
+  height: 10px;
+  margin: 0 16px;
+  width: 10px;
 }
 
-input:nth-of-type(5) {
-  grid-column: 6 / 7;
-  grid-row: 2 / 3;
-}
-
-input:nth-of-type(5):checked ~ main#carousel {
-  --position: 5;
-}
-
-.item.tba {
-  transform: rotateY(calc(-12deg * var(--r))) translateX(calc(-375px * var(--r))) translateY(30px);
-  --r: calc(var(--position) - var(--offset));
-  --abs: max(calc(var(--r) * -1), var(--r));
-  transition: all .5s ease-in-out;
-  z-index: calc((var(--position) - var(--abs)));
+.gallery-nav li.gallery-item-selected {
+  background: #555;
 }
 /*# sourceMappingURL=style.css.map */
