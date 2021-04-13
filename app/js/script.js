@@ -30,7 +30,19 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-/* Toggle tba-class */
+/* Skift tekst i udtalelser */
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const items = document.querySelectorAll(".item")
 
@@ -81,6 +93,8 @@ udtalelser.forEach(node => {
 //   console.log(e.currentTarget)
 //   e.currentTarget.classList.add("tba");
 // };
+
+/* ikke mit js
 
 const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls');
@@ -180,7 +194,7 @@ exampleCarousel.setControls();
 // exampleCarousel.setNav();
 exampleCarousel.useControls();
 
-
+*/
   
   
 
