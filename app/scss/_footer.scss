@@ -1,88 +1,124 @@
 .footer {
   color: $clr-dawn-pink;
+  padding-bottom: 6rem;
+
+  h2 {
+    font-weight: 700;
+    text-align: center;
+  }
 
   &__applogo {
     display: block;
     text-align: center;
-    height: 95px;
-    width: 100%;
-    max-width: 95px;
+    height: 80px;
+    width: 80px;
     background-image: url("../../images/minplan.png");
     background-position: center center;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    margin: 0 auto 6rem auto;
+
+    @include breakpoint-up(ipad) {
+      margin: 0 6rem 0 0;
+      height: 95px;
+      width: 95px;
+    }
   }
   &__container {
-    flex-direction: row;
+    text-align: center;
+    margin: 4rem auto 6rem auto;
 
-    div {
-      padding-left: 5em;
-      max-width: 550px;
+    @include breakpoint-up(ipad) {
+      flex-direction: row;
+      text-align: unset;
+
+      div {
+        max-width: 60%;
+      }
     }
   }
 
   &__logos {
-    flex-direction: row;
+    @include breakpoint-up(ipad) {
+      flex-direction: row;
+    }
   }
-
+  // TODO undersøg alignment her med download ikoner og min plan
   &__storelogo {
     display: block;
-    text-align: center;
-    height: auto;
-    width: 100%;
-    max-width: 175px;
-    margin-top: 4em;
-  }
-  &__storelogo2 {
-    display: block;
-    text-align: center;
-    height: auto;
-    width: 100%;
-    max-width: 148px;
-    margin-left: 2em;
+    height: 60px;
+    width: 175px;
+    background-image: url("../../images/gOoGlE.svg");
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    @include breakpoint-up(ipad) {
+      width: 200px;
+    }
+
+    &:last-child {
+      background-image: url("../../images/appstore-badge.svg");
+      width: 175px;
+      margin-top: 2rem;
+
+      @include breakpoint-up(ipad) {
+        margin-top: unset;
+        margin-left: 2rem;
+      }
+    }
   }
 
   &__hr {
-    border-top: solid white 1px;
+    border-top: solid $clr-dawn-pink 1px;
     width: 100%;
-  }
+    margin: 6rem 0;
 
-  &__some1 {
-    display: block;
-    text-align: center;
-    height: 55px;
-    width: 55px;
-    background-image: url("../../images/icons/facebook.svg");
-    background-position: center center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-  }
-
-  &__some2 {
-    margin-left: 1em;
-    display: block;
-    text-align: center;
-    height: 55px;
-    width: 55px;
-    background-image: url("../../images/icons/instagram.svg");
-    background-position: center center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+    @include breakpoint-up(computer) {
+      margin: 14rem 0 6rem 0;
+    }
   }
 
   &__links {
     width: 100%;
     font-size: $font-sm-fallback;
     font-size: $font-sm;
-    font-weight: 700;
+    font-weight: 500;
+
     a {
       display: inline-block;
     }
-    div {
-      margin-top: 1em;
+
+    .flex a:first-child {
+      margin: 2rem 0;
+
+      @include breakpoint-up(ipad) {
+        margin: 0 2rem 0 0;
+      }
+    }
+
+    @include breakpoint-up(ipad) {
+      flex-direction: row;
+      align-items: center;
+
+      div:last-child {
+        flex-direction: row;
+      }
     }
   }
-  &__links2 {
-    margin-right: 3em;
+
+  &__some {
+    display: block;
+    height: 45px;
+    width: 45px;
+    background-image: url("../../images/icons/facebook.svg");
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    &:nth-of-type(2) {
+      background-image: url("../../images/icons/instagram.svg");
+      margin-left: 2rem;
+    }
   }
 }
