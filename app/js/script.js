@@ -30,7 +30,7 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-/* Toggle checkedbox-class */
+/* Toggle tba-class */
 
 // const items = document.querySelectorAll(".item")
 
@@ -56,12 +56,41 @@ window.onscroll = function () {
 //   checkedBox[0].classList.toggle("checkedbox")
 // }
 
-const udtalelser = document.querySelectorAll(".udtalelsernav");
-const boks = Array.from(document.querySelectorAll(".tbr"));
-boks.forEach(add)
+const udtalelser = Array.from(document.querySelectorAll(".udtalelsernav"));
 
-udtalelser.forEach(udtalelsernav => udtalelsernav.addEventListener("click", add));
-for(let i = 0; i < udtalelser.length; i++) {
-  boks.classList.add("tba")
+
+
+const handleClick = (e) => {
+  udtalelser.forEach(node => {
+    node.classList.remove('tba');
+  });
+  e.currentTarget.classList.add('tba');
 }
+
+udtalelser.forEach(node => {
+  node.addEventListener('click', handleClick)
+});
+
+// udtalelser.forEach(udtalelsernav => udtalelsernav.addEventListener("click", handleClick));
+
+// function handleClick(e) {
+//   console.log(e.currentTarget)
+//   e.currentTarget.classList.add("tba");
+// };
+
+
+  
+  
+
+
+
+  // for (let i = 1; i < boks.length; i++) {
+  //     boks[i].classList.add("tba")
+  // }
+
+  // boks[1].classList.add("tba")
+  // boks[0].classList.remove("tba")
+
+
+const boks = Array.from(document.querySelectorAll(".item"));
 

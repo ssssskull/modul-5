@@ -483,6 +483,11 @@ main#carousel {
   height: 400px;
   background-color: lightgray;
   border-radius: 15%;
+  transform: rotateY(calc(-12deg * var(--r))) translateX(calc(-375px * var(--r)));
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all .5s ease-in-out;
+  z-index: calc((var(--position) - var(--abs)));
 }
 
 .item:nth-of-type(1) {
@@ -548,14 +553,6 @@ input:nth-of-type(5) {
 
 input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
-}
-
-.item.tbr {
-  transform: rotateY(calc(-12deg * var(--r))) translateX(calc(-375px * var(--r)));
-  --r: calc(var(--position) - var(--offset));
-  --abs: max(calc(var(--r) * -1), var(--r));
-  transition: all .5s ease-in-out;
-  z-index: calc((var(--position) - var(--abs)));
 }
 
 .item.tba {
