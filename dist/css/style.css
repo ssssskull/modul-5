@@ -540,7 +540,8 @@ main img {
   display: block;
   text-align: center;
   height: 95px;
-  width: 95px;
+  width: 100%;
+  max-width: 95px;
   background-image: url("../../images/minplan.png");
   background-position: center center;
   background-size: 100% auto;
@@ -556,8 +557,7 @@ main img {
 
 .footer__container div {
   padding-left: 5em;
-  padding-top: 1em;
-  width: 500px;
+  max-width: 550px;
 }
 
 .footer__logos {
@@ -571,7 +571,8 @@ main img {
   display: block;
   text-align: center;
   height: auto;
-  width: 175px;
+  width: 100%;
+  max-width: 175px;
   margin-top: 4em;
 }
 
@@ -579,7 +580,8 @@ main img {
   display: block;
   text-align: center;
   height: auto;
-  width: 148px;
+  width: 100%;
+  max-width: 148px;
   margin-left: 2em;
 }
 
@@ -600,6 +602,7 @@ main img {
 }
 
 .footer__some2 {
+  margin-left: 1em;
   display: block;
   text-align: center;
   height: 55px;
@@ -610,10 +613,22 @@ main img {
   background-repeat: no-repeat;
 }
 
-.footer__end {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.footer__links {
+  width: 100%;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.footer__links a {
+  display: inline-block;
+}
+
+.footer__links div {
+  margin-top: 1em;
+}
+
+.footer__links2 {
+  margin-right: 3em;
 }
 /*# sourceMappingURL=style.css.map */
