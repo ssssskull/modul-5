@@ -1,0 +1,88 @@
+.footer {
+  color: $clr-dawn-pink;
+
+  &__applogo {
+    display: block;
+    text-align: center;
+    height: 95px;
+    width: 100%;
+    max-width: 95px;
+    background-image: url("../../images/minplan.png");
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+  &__container {
+    flex-direction: row;
+
+    div {
+      padding-left: 5em;
+      max-width: 550px;
+    }
+  }
+
+  &__logos {
+    flex-direction: row;
+  }
+
+  &__storelogo {
+    display: block;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    max-width: 175px;
+    margin-top: 4em;
+  }
+  &__storelogo2 {
+    display: block;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    max-width: 148px;
+    margin-left: 2em;
+  }
+
+  &__hr {
+    border-top: solid white 1px;
+    width: 100%;
+  }
+
+  &__some1 {
+    display: block;
+    text-align: center;
+    height: 55px;
+    width: 55px;
+    background-image: url("../../images/icons/facebook.svg");
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
+  &__some2 {
+    margin-left: 1em;
+    display: block;
+    text-align: center;
+    height: 55px;
+    width: 55px;
+    background-image: url("../../images/icons/instagram.svg");
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
+  &__links {
+    width: 100%;
+    font-size: $font-sm-fallback;
+    font-size: $font-sm;
+    font-weight: 700;
+    a {
+      display: inline-block;
+    }
+    div {
+      margin-top: 1em;
+    }
+  }
+  &__links2 {
+    margin-right: 3em;
+  }
+}
