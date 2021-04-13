@@ -470,10 +470,9 @@ main img {
   position: absolute;
   transition: all 0.3s ease-in-out;
   border-radius: 2em;
-  height: 200px;
   opacity: 1;
   left: 50%;
-  width: 200px;
+  flex: 0 1 200px;
 }
 
 .gallery-item-1 {
@@ -514,6 +513,7 @@ main img {
   left: 85%;
   background-color: #57a0d3;
   transform: translateX(-50%);
+  z-index: 0;
 }
 
 .gallery-controls {

@@ -113,7 +113,7 @@ class Carousel {
   setCurrentState(direction) {
 
     if (direction.className == 'gallery-controls-previous') {
-      this.carouselArray.unshift(this.carouselArray.pop());
+      this.carouselArray.unshift(this.carouselArray.pop()); //Indsætter sidste element i array som det første
     } else {
       this.carouselArray.push(this.carouselArray.shift());
     }
