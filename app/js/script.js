@@ -32,7 +32,17 @@ window.onscroll = function () {
 
 /* Skift tekst i udtalelser */
 
+const arrows = document.querySelectorAll(".arrow")
+let udtalelser = document.querySelector(".p-udtalelser");
+let andreUdtalelser = ["lorem", "ipsum", "ikkogs"];
 
+function handleClick(e) {
+  for(let i = 0; i < andreUdtalelser.length; i++) {
+    document.querySelector(".p-udtalelser").innerHTML = andreUdtalelser[i]
+  }
+}
+
+arrows.forEach(arrow => arrow.addEventListener("click", handleClick))
 
 
 

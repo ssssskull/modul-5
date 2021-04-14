@@ -450,13 +450,38 @@ main img {
 }
 
 .widthcontainer {
-  width: 75%;
+  width: 65%;
   position: relative;
+}
+
+@media (min-width: 64em) {
+  .widthcontainer {
+    width: 70%;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .widthcontainer {
+    width: 45%;
+  }
 }
 
 .linecontainer {
   width: 100%;
-  column-gap: 3.4rem;
+  column-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 40em) {
+  .linecontainer {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .linecontainer {
+    margin-bottom: 7rem;
+  }
 }
 
 hr {
@@ -476,20 +501,58 @@ hr {
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: block;
-  width: 75px;
-  height: 75px;
+  width: 40px;
+  height: 40px;
 }
 
 .udtalelsercontainer {
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.4rem;
+}
+
+@media (min-width: 40em) {
+  .udtalelsercontainer {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .udtalelsercontainer {
+    margin-bottom: 7rem;
+  }
 }
 
 .p-udtalelser {
   margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+@media (min-width: 40em) {
+  .p-udtalelser {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .p-udtalelser {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 6rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .p-udtalelser {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 6rem;
+  }
 }
 
 .p-info {
   font-weight: bold;
+  max-width: 100%;
 }
 
 .arrow {
@@ -498,14 +561,39 @@ hr {
   background-color: #faf6f4;
   color: #5a6175;
   position: absolute;
-  transform: translateY(350%);
+  bottom: 50%;
+}
+
+@media (min-width: 40em) {
+  .arrow {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .arrow {
+    font-size: 6rem;
+    bottom: 40%;
+  }
 }
 
 button:first-of-type {
-  left: -45px;
+  left: -50px;
+}
+
+@media (min-width: 40em) {
+  button:first-of-type {
+    left: -60px;
+  }
 }
 
 button:last-of-type {
-  right: -45px;
+  right: -50px;
+}
+
+@media (min-width: 40em) {
+  button:last-of-type {
+    right: -60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,13 +3,30 @@
 }
 
 .widthcontainer {
-  width: 75%;
+  width: 65%;
   position: relative;
+
+  @include breakpoint-up(computer) {
+    width: 70%;
+  }
+
+  @include breakpoint-up(largeComputer) {
+    width: 45%;
+  }
 }
 
 .linecontainer {
   width: 100%;
-  column-gap: 3.4rem;
+  column-gap: 2rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint-up(ipad) {
+    margin-bottom: 5rem;
+  }
+
+  @include breakpoint-up(computer) {
+    margin-bottom: 7rem;
+  }
 }
 
 hr {
@@ -29,25 +46,50 @@ hr {
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: block;
-  width: 75px;
-  height: 75px;
+  width: 40px;
+  height: 40px;
 }
 
-// .quotation {
-//   font-size: 3rem;
-// }
-
 .udtalelsercontainer {
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.4rem;
+
+  @include breakpoint-up(ipad) {
+    margin-bottom: 5rem;
+  }
+
+  @include breakpoint-up(computer) {
+    margin-bottom: 7rem;
+  }
 }
 
 .p-udtalelser {
   margin-bottom: 2rem;
+  max-width: 100%;
+
+  @include breakpoint-up(ipad) {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 3rem;
+  }
+
+  @include breakpoint-up(computer) {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 6rem;
+  }
+
+  @include breakpoint-up(largeComputer) {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 6rem;
+  }
 }
 
 .p-info {
   font-weight: bold;
+  max-width: 100%;
 }
+
 
 .arrow {
   font-size: 3rem;
@@ -55,13 +97,30 @@ hr {
   background-color: $clr-dawn-pink;
   color: $clr-text;
   position: absolute;
-  transform: translateY(350%);
+  bottom: 50%;
+
+  @include breakpoint-up(ipad) {
+    font-size: 4rem;
+  }
+
+  @include breakpoint-up(computer) {
+    font-size: 6rem;
+    bottom: 40%;
+  }
 }
 
 button:first-of-type {
-  left: -45px;
+  left: -50px;
+
+  @include breakpoint-up(ipad) {
+    left: -60px;
+  }
 }
 
 button:last-of-type {
-  right: -45px;
+  right: -50px;
+
+  @include breakpoint-up(ipad) {
+    right: -60px;
+  }
 }
