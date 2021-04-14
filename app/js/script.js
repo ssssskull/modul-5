@@ -29,3 +29,21 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+
+const links = document.querySelectorAll('.links');
+const sections = document.querySelectorAll('section');
+
+function changeLinkState() {
+  let index = sections.length;
+
+  while(--index && window.scrollY < sections[index].offsetTop) {}
+
+  links.forEach((link) => link.classList.remove('active'));
+  links[index].classList.add('active');
+
+  console.log(sections[index].offsetTop)
+}
+
+changeLinkState();
+window.addEventListener('scroll', changeLinkState);

@@ -479,6 +479,31 @@ main img {
   background: #faf6f4;
 }
 
+.aboutus {
+  background: #FFF;
+}
+
+.teamet {
+  margin: 3rem 0 5rem 0;
+}
+
+.abouthecourse {
+  background: #F7F7F7;
+}
+
+.abouthands {
+  margin: 7rem 0 7rem 0;
+}
+
+.callmetext {
+  font-weight: 600;
+  margin: 3rem;
+}
+
+.coloredtext {
+  color: #8E3E4E;
+}
+
 .kontakt {
   background: #f7f7f7;
   text-align: left;

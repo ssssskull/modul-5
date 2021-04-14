@@ -10,11 +10,15 @@
       name="description"
       content="Selvmordsforebyggelse - til patienter og pårørende"
     />
+    <link rel="stylesheet" href="dist/css/splash.css">
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/mro3ydc.css" />
   </head>
   <body>
+    <div class="splash">
+      <div class="fade-in"></div>
+    </div>
     <header class="header">
       <div class="overlay"></div>
       <nav class="container flex flex-jc-sb flex-ai-c container--pall">
@@ -37,15 +41,17 @@
         </a>
         <ul class="header__right flex hide-for-mobile">
           <li>
-            <a class="active" href="#!" tabindex="0" title="Forside">Forside</a>
+            <a class="links" href="#!" tabindex="0" title="Forside">Forside</a>
           </li>
           <li>
-            <a href="#!" tabindex="0" title="Lær os at kende"
+            <a class="links" href="#!" tabindex="0" title="Lær os at kende"
               >Lær os at kende</a
             >
           </li>
           <li><a href="#!" tabindex="0" title="Udtalelser">Udtalelser</a></li>
-          <li><a href="#!" tabindex="0" title="Kontakt">Kontakt</a></li>
+          <li>
+            <a class="links" href="#!" tabindex="0" title="Kontakt">Kontakt</a>
+          </li>
         </ul>
       </nav>
       <ul class="header__menu hide-for-desktop container--py">
@@ -96,21 +102,36 @@
       </div>
     </section>
     <main id="main">
-      <section
-        class="aboutus container--pall container--section flex flex-dr-cl flex-ai-c"
-      >
-        <h2>Lær os at kende</h2>
-        <p>
-          Forløbet strækker sig over 10 samtaler i samarbejde med en læge,
-          sygeplejerske, socialrådgiver, psykiater og i perioder en psykolog.
-          Disse samtaler varer typisk 45 minutter til en time og kan være
-          individuelle eller inddrage pårørende – alt efter dit ønske. Og er der
-          behov for det, forlænges forløbet. Hvert menneske er unikt og har
-          deres egen historie bag selvmordstankerne. Derfor tilpasses det, der
-          snakkes om, altid dig. Vi kan ikke fjerne dine selvmordstanker, men vi
-          kan give dig midler og værktøjer til at håndtere dem.
-        </p>
-      </section>
+        <!-- Lær os at kende-->
+        <section
+          class="aboutus container--pall container--section flex flex-dr-cl flex-ai-c"
+        >
+          <h2>Lær os at kende</h2>
+          <img src = "images/berorte.svg" class="teamet" alt="Teamet"/>
+          <p>
+            Hos Team for Selvmordsforebyggelse brænder vi for at lytte til og drage omsorg for selvmordstruede. Vi vil hjælpe dig med at finde en løsning i en tid, der virker særligt håbløs, og vi bestræber os altid på at hjælpe dig og dine pårørende godt på vej.
+          </p>
+        </section>
+        <!-- Om forløbet-->
+        <section  class="abouthecourse container--pall container--section flex flex-dr-cl flex-ai-c"
+        >
+          <h2>Om forløbet</h2>
+          
+          <p>
+            Forløbet strækker sig over 10 samtaler i samarbejde med en læge, sygeplejerske, socialrådgiver, psykiater og i perioder en psykolog. Disse samtaler varer typisk 45 minutter til en time og kan være individuelle eller inddrage pårørende – alt efter dit ønske. Og er der behov for det, forlænges forløbet.
+            Hvert menneske er unikt og har deres egen historie bag selvmordstankerne. Derfor tilpasses det, der snakkes om, altid dig. 
+            Vi kan ikke fjerne dine selvmordstanker, men vi kan give dig midler og værktøjer til at håndtere dem. 
+          </p>
+
+          <img src="images/hander.svg" class="abouthands" alt="Hands">
+  
+          <h2>Kan du bruge forløbet?</h2>
+          <p>Forløbet er for alle over 20 år i Region Syddanmark, der har forsøgt eller været tæt på at forsøge selvmord. 
+            Har du en alvorlig psykisk lidelse, et misbrug eller en svær spiseforstyrrelse, er du dog bedre hjulpet i en af Psykiatriens andre afdelinger.
+          </p>
+          <p class="callmetext">Er du i tvivl, om forløbet er for dig? Vores sekretær sidder klar til at hjælpe dig på <span class="coloredtext">99 44 89 60</span>.</p>
+  
+        </section>
       <section
         class="kontakt container--pall container--section flex flex-dr-cl flex-ai-c"
       >
@@ -215,6 +236,7 @@
         </div>
       </section>
     </footer>
+    <script src="app/js/splash.js" defer></script>
     <script src="app/js/script.js" defer></script>
   </body>
 </html>
