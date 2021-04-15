@@ -16,7 +16,12 @@
     background-position: center center;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    margin: 0 auto 6rem auto;
+    margin: 0 auto 5.5rem auto;
+    transition: $transition-200ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     @include breakpoint-up(ipad) {
       margin: 0 6rem 0 0;
@@ -52,9 +57,14 @@
     background-position: center center;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    transition: $transition-200ms;
 
     @include breakpoint-up(ipad) {
       width: 200px;
+    }
+
+    &:hover {
+      opacity: 0.8;
     }
 
     &:last-child {
@@ -123,6 +133,11 @@
     background-position: center center;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    transition: $transition-200ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     &:nth-of-type(2) {
       background-image: url("../../images/icons/instagram.svg");

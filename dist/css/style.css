@@ -627,7 +627,13 @@ main img {
   background-position: center center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  margin: 0 auto 6rem auto;
+  margin: 0 auto 5.5rem auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer__applogo:hover {
+  opacity: 0.8;
 }
 
 @media (min-width: 40em) {
@@ -673,12 +679,18 @@ main img {
   background-position: center center;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 @media (min-width: 40em) {
   .footer__storelogo {
     width: 200px;
   }
+}
+
+.footer__storelogo:hover {
+  opacity: 0.8;
 }
 
 .footer__storelogo:last-child {
@@ -764,6 +776,12 @@ main img {
   background-position: center center;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer__some:hover {
+  opacity: 0.8;
 }
 
 .footer__some:nth-of-type(2) {
