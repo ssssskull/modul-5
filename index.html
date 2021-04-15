@@ -10,7 +10,7 @@
       name="description"
       content="Selvmordsforebyggelse - til patienter og pårørende"
     />
-    <link rel="stylesheet" href="dist/css/splash.css">
+    <link rel="stylesheet" href="dist/css/splash.css" />
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/mro3ydc.css" />
@@ -41,26 +41,36 @@
         </a>
         <ul class="header__right flex hide-for-mobile">
           <li>
-            <a class="links" href="#!" tabindex="0" title="Forside">Forside</a>
+            <a class="links" href="#forside" tabindex="0" title="Forside"
+              >Forside</a
+            >
           </li>
           <li>
-            <a class="links" href="#!" tabindex="0" title="Lær os at kende"
+            <a class="links" href="#om-os" tabindex="0" title="Lær os at kende"
               >Lær os at kende</a
             >
           </li>
-          <li><a href="#!" tabindex="0" title="Udtalelser">Udtalelser</a></li>
           <li>
-            <a class="links" href="#!" tabindex="0" title="Kontakt">Kontakt</a>
+            <a href="#udtalelser" tabindex="0" title="Udtalelser">Udtalelser</a>
+          </li>
+          <li>
+            <a class="links" href="#kontakt" tabindex="0" title="Kontakt"
+              >Kontakt</a
+            >
           </li>
         </ul>
       </nav>
       <ul class="header__menu hide-for-desktop container--py">
-        <li><a href="#!" tabindex="0" title="Forside">Forside</a></li>
+        <li><a href="#forside" tabindex="0" title="Forside">Forside</a></li>
         <li>
-          <a href="#!" tabindex="0" title="Lær os at kende">Lær os at kende</a>
+          <a href="#om-os" tabindex="0" title="Lær os at kende"
+            >Lær os at kende</a
+          >
         </li>
-        <li><a href="#!" tabindex="0" title="Udtalelser">Udtalelser</a></li>
-        <li><a href="#!" tabindex="0" title="Kontakt">Kontakt</a></li>
+        <li>
+          <a href="#udtalelser" tabindex="0" title="Udtalelser">Udtalelser</a>
+        </li>
+        <li><a href="#kontakt" tabindex="0" title="Kontakt">Kontakt</a></li>
         <li>
           <a
             class="cta-secondary flex flex-ai-c"
@@ -75,6 +85,7 @@
     <section class="hero flex flex-dr-cl">
       <div
         class="hero__container container--pall flex flex-dr-cl flex-jc-sb flex-ai-st"
+        id="forside"
       >
         <div class="hero__title container">
           <h1>Tag hånd om din situation</h1>
@@ -102,41 +113,57 @@
       </div>
     </section>
     <main id="main">
-        <!-- Lær os at kende-->
-        <section
-          class="aboutus container--pall container--section flex flex-dr-cl flex-ai-c"
-        >
-          <h2>Lær os at kende</h2>
-          <img src = "images/berorte.svg" class="teamet" alt="Teamet"/>
-          <p>
-            Hos Team for Selvmordsforebyggelse brænder vi for at lytte til og drage omsorg for selvmordstruede. Vi vil hjælpe dig med at finde en løsning i en tid, der virker særligt håbløs, og vi bestræber os altid på at hjælpe dig og dine pårørende godt på vej.
-          </p>
-        </section>
-        <!-- Om forløbet-->
-        <section  class="abouthecourse container--pall container--section flex flex-dr-cl flex-ai-c"
-        >
-          <h2>Om forløbet</h2>
-          
-          <p>
-            Forløbet strækker sig over 10 samtaler i samarbejde med en læge, sygeplejerske, socialrådgiver, psykiater og i perioder en psykolog. Disse samtaler varer typisk 45 minutter til en time og kan være individuelle eller inddrage pårørende – alt efter dit ønske. Og er der behov for det, forlænges forløbet.
-            Hvert menneske er unikt og har deres egen historie bag selvmordstankerne. Derfor tilpasses det, der snakkes om, altid dig. 
-            Vi kan ikke fjerne dine selvmordstanker, men vi kan give dig midler og værktøjer til at håndtere dem. 
-          </p>
+      <!-- Lær os at kende-->
+      <section
+        class="aboutus container--pall container--section flex flex-dr-cl flex-ai-c"
+        id="om-os"
+      >
+        <h2>Lær os at kende</h2>
+        <img src="images/berorte.svg" class="teamet" alt="Teamet" />
+        <p>
+          Hos Team for Selvmordsforebyggelse brænder vi for at lytte til og
+          drage omsorg for selvmordstruede. Vi vil hjælpe dig med at finde en
+          løsning i en tid, der virker særligt håbløs, og vi bestræber os altid
+          på at hjælpe dig og dine pårørende godt på vej.
+        </p>
+      </section>
+      <!-- Om forløbet-->
+      <section
+        class="abouthecourse container--pall container--section flex flex-dr-cl flex-ai-c"
+      >
+        <h2>Om forløbet</h2>
 
-          <img src="images/hander.svg" class="abouthands" alt="Hands">
-  
-          <h2>Kan du bruge forløbet?</h2>
-          <p>Forløbet er for alle over 20 år i Region Syddanmark, der har forsøgt eller været tæt på at forsøge selvmord. 
-            Har du en alvorlig psykisk lidelse, et misbrug eller en svær spiseforstyrrelse, er du dog bedre hjulpet i en af Psykiatriens andre afdelinger.
-          </p>
-          <p class="callmetext">Er du i tvivl, om forløbet er for dig? Vores sekretær sidder klar til at hjælpe dig på <span class="coloredtext">99 44 89 60</span>.</p>
-  
-        </section>
+        <p>
+          Forløbet strækker sig over 10 samtaler i samarbejde med en læge,
+          sygeplejerske, socialrådgiver, psykiater og i perioder en psykolog.
+          Disse samtaler varer typisk 45 minutter til en time og kan være
+          individuelle eller inddrage pårørende – alt efter dit ønske. Og er der
+          behov for det, forlænges forløbet. Hvert menneske er unikt og har
+          deres egen historie bag selvmordstankerne. Derfor tilpasses det, der
+          snakkes om, altid dig. Vi kan ikke fjerne dine selvmordstanker, men vi
+          kan give dig midler og værktøjer til at håndtere dem.
+        </p>
+
+        <img src="images/hander.svg" class="abouthands" alt="Hands" />
+
+        <h2>Kan du bruge forløbet?</h2>
+        <p>
+          Forløbet er for alle over 20 år i Region Syddanmark, der har forsøgt
+          eller været tæt på at forsøge selvmord. Har du en alvorlig psykisk
+          lidelse, et misbrug eller en svær spiseforstyrrelse, er du dog bedre
+          hjulpet i en af Psykiatriens andre afdelinger.
+        </p>
+        <p class="callmetext">
+          Er du i tvivl, om forløbet er for dig? Vores sekretær sidder klar til
+          at hjælpe dig på <span class="coloredtext">99 44 89 60</span>.
+        </p>
+      </section>
       <section
         class="kontakt container--pall container--section flex flex-dr-cl flex-ai-c"
+        id="kontakt"
       >
         <h2>Snak med os</h2>
-        <div class="kontakt__container container--padding">
+        <div class="kontakt__container container--padding container">
           <div class="kontakt__griditem1">
             <p>
               Du er altid velkommen til selv at kontakte os – selv uden

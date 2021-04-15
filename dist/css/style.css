@@ -384,7 +384,7 @@ h3 {
   text-align: center;
   height: 92vh;
   width: 100%;
-  background-image: url("../../images/Region-Syddanmark-hero-baggrund.png");
+  background-image: url("../../images/Region-Syddanmark-hero-baggrund.svg");
   background-position: center center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -447,7 +447,7 @@ h3 {
 }
 
 .hero__scroll {
-  background-color: #faf6f4;
+  background-color: #fff;
   height: 8vh;
 }
 
@@ -677,6 +677,12 @@ main img {
 @media (min-width: 40em) {
   .footer__links .flex a:first-child {
     margin: 0 2rem 0 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__links .flex a:first-child {
+    margin: 0 5.5rem 0 0;
   }
 }
 

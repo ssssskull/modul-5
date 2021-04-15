@@ -95,6 +95,10 @@
       @include breakpoint-up(ipad) {
         margin: 0 2rem 0 0;
       }
+
+      @include breakpoint-up(computer) {
+        margin: 0 5.5rem 0 0;
+      }
     }
 
     @include breakpoint-up(ipad) {

@@ -3,13 +3,12 @@
   color: $clr-dawn-pink;
 
   &__container {
-    //BUG Undersøg hvorfor den ikke gælde automatisk
+    //BUG Undersøg hvorfor den ikke gælder automatisk
     box-sizing: border-box;
-
     text-align: center;
     height: 92vh;
     width: 100%;
-    background-image: url("../../images/Region-Syddanmark-hero-baggrund.png");
+    background-image: url("../../images/Region-Syddanmark-hero-baggrund.svg");
     background-position: center center;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -58,7 +57,7 @@
     }
   }
   &__scroll {
-    background-color: $clr-dawn-pink;
+    background-color: $clr-white;
     height: 8vh;
 
     a {

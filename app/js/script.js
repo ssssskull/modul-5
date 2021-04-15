@@ -30,10 +30,9 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-
-const links = document.querySelectorAll('.links');
-const sections = document.querySelectorAll('section');
-
+const links = document.querySelectorAll(".links");
+const sections = document.querySelectorAll("section");
+/*
 function changeLinkState() {
   let index = sections.length;
 
@@ -47,3 +46,4 @@ function changeLinkState() {
 
 changeLinkState();
 window.addEventListener('scroll', changeLinkState);
+*/
