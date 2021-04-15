@@ -62,8 +62,8 @@ h1 {
 
 h2 {
   font-weight: 500;
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 26px;
+  font-size: 2.6rem;
   margin-bottom: 2rem;
 }
 
@@ -76,14 +76,17 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-weight: 500;
+  font-size: 20px;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
 @media (min-width: 64em) {
   h3 {
     margin-bottom: 3rem;
+    font-size: 26px;
+    font-size: 2.6rem;
   }
 }
 
@@ -97,12 +100,23 @@ h3 {
   width: max-content;
   margin: 0 auto;
   font-size: 1.4rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .cta-secondary--outline {
   color: #faf6f4;
   border: 2px solid #faf6f4;
   display: none;
+}
+
+.cta-secondary--outline:hover {
+  background-color: #faf6f4;
+  color: #5a6175;
+}
+
+.cta-secondary--outline:hover::before {
+  background-image: url("../../images/icons/phone-black.svg");
 }
 
 @media (min-width: 64em) {
@@ -122,6 +136,8 @@ h3 {
   width: 16px;
   height: 16px;
   padding-right: 0.5rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .cta-secondary--white {
@@ -270,12 +286,25 @@ h3 {
   margin-right: 5.5rem;
 }
 
-.header__right li:not(:last-child) {
+.header__right li {
   margin-right: 5.5rem;
 }
 
+.header__right li :last-child {
+  margin-right: 0;
+}
+
+.header__right li a {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.header__right li a:hover {
+  text-decoration: underline;
+}
+
 .header__right .active {
-  border-bottom: 2px solid #faf6f4;
+  text-decoration: underline;
 }
 
 .header__toggle {
@@ -419,6 +448,10 @@ h3 {
   }
 }
 
+.hero__container a:hover {
+  opacity: 0.8;
+}
+
 @media (min-width: 64em) {
   .hero__container a {
     margin: unset;
@@ -459,8 +492,14 @@ h3 {
   background-position: center;
   width: 3.5rem;
   height: 3.5rem;
-  background-color: lightgrey;
+  background-color: #dbdbdb;
   border-radius: 50%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero__scroll a:hover {
+  opacity: 0.8;
 }
 
 main {
@@ -480,15 +519,15 @@ main img {
 }
 
 .aboutus {
-  background: #FFF;
+  background: #fff;
 }
 
 .teamet {
-  margin: 3rem 0 5rem 0;
+  margin: 5rem 0 7rem 0;
 }
 
 .abouthecourse {
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
 .abouthands {
@@ -497,11 +536,11 @@ main img {
 
 .callmetext {
   font-weight: 600;
-  margin: 3rem;
+  margin: 3rem 0 0 0;
 }
 
 .coloredtext {
-  color: #8E3E4E;
+  color: #8e3e4e;
 }
 
 .kontakt {
@@ -530,6 +569,10 @@ main img {
   grid-row: 1 / 2;
 }
 
+.kontakt__griditem1 strong {
+  color: #8e3e4e;
+}
+
 .kontakt__griditem2 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -537,6 +580,10 @@ main img {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
+}
+
+.kontakt__griditem2 strong {
+  color: #8e3e4e;
 }
 
 .kontakt__griditem3 {
@@ -670,6 +717,17 @@ main img {
   display: inline-block;
 }
 
+.footer__links div:last-child {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer__links div:last-child a:hover {
+  text-decoration: underline;
+}
+
 .footer__links .flex a:first-child {
   margin: 2rem 0;
 }
@@ -695,12 +753,6 @@ main img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .footer__links div:last-child {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
   }
 }
 

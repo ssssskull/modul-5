@@ -13,6 +13,7 @@
     background-size: 100% auto;
     background-repeat: no-repeat;
     padding-top: 7.4rem;
+
     @include breakpoint-up(ipad) {
       background-size: 70% auto;
     }
@@ -32,6 +33,10 @@
       }
     }
     a {
+      &:hover {
+        opacity: 0.8;
+      }
+
       @include breakpoint-up(computer) {
         margin: unset;
         font-size: $font-sm-fallback;
@@ -68,8 +73,13 @@
       background-position: center;
       width: 3.5rem;
       height: 3.5rem;
-      background-color: lightgrey;
+      background-color: rgb(219, 219, 219);
       border-radius: 50%;
+      transition: $transition-200ms;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }

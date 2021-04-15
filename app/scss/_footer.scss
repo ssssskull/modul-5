@@ -89,6 +89,14 @@
       display: inline-block;
     }
 
+    div:last-child {
+      flex-direction: row;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
     .flex a:first-child {
       margin: 2rem 0;
 
@@ -104,10 +112,6 @@
     @include breakpoint-up(ipad) {
       flex-direction: row;
       align-items: center;
-
-      div:last-child {
-        flex-direction: row;
-      }
     }
   }
 

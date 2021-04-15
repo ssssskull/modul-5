@@ -60,12 +60,15 @@ h2 {
   }
 }
 h3 {
-  font-size: $font-sm-fallback;
-  font-size: $font-sm;
+  font-weight: 500;
+  font-size: 20px;
+  font-size: 2rem;
   margin-bottom: 2rem;
 
   @include breakpoint-up(computer) {
     margin-bottom: 3rem;
+    font-size: $font-med-fallback;
+    font-size: $font-med;
   }
 }
 
@@ -79,11 +82,21 @@ h3 {
   width: max-content;
   margin: 0 auto;
   font-size: 1.4rem;
+  transition: $transition-200ms;
 
   &--outline {
     color: $clr-dawn-pink;
     border: 2px solid $clr-dawn-pink;
     display: none;
+
+    &:hover {
+      background-color: $clr-dawn-pink;
+      color: $clr-text;
+
+      &::before {
+        background-image: url("../../images/icons/phone-black.svg");
+      }
+    }
 
     @include breakpoint-up(computer) {
       display: flex;
@@ -99,6 +112,7 @@ h3 {
     width: 16px;
     height: 16px;
     padding-right: 0.5rem;
+    transition: $transition-200ms;
   }
 
   &--white {
