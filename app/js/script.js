@@ -60,9 +60,9 @@ function handleClickRight() {
     navn.innerHTML = andreNavne[counter];
     by.innerHTML = andreByer[counter];
 
-    udtalelser.classList.add("animation")
-    navn.classList.add("animation")
-    by.classList.add("animation")
+    // udtalelser.classList.add("animation")
+    // navn.classList.add("animation")
+    // by.classList.add("animation")
 
     arrowLeft.classList.remove("hidden")
 
