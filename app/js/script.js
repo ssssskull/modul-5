@@ -32,19 +32,26 @@ window.onscroll = function () {
 
 /* Skift tekst i udtalelser */
 
-const arrows = document.querySelectorAll(".arrow")
+const arrowRight = document.querySelector(".right")
+const arrowLeft = document.querySelector(".left")
 let udtalelser = document.querySelector(".p-udtalelser");
 let navn = document.querySelector(".navn")
 let by = document.querySelector(".by")
 let andreUdtalelser = ["lorem", "ipsum", "dolor", "sit", "amet"];
 let andreNavne = ["Maria, 23", "Carsten, 59", "Sille, 19", "Berit, 43", "Emil, 25"]
 let andreByer = ["Odense", "Aabenraa", "Esbjerg", "Fredericia", "Kolding"]
-let counter = 0;
+let lastElementUdtalelser = andreUdtalelser[andreUdtalelser.length - 1];
+let counter = 2;
 let arrayLength = andreUdtalelser.length - 1;
 
-function handleClick() {
-  if(counter === arrayLength){
-    counter = 0;
+arrowRight.addEventListener("click", handleClickRight)
+arrowLeft.addEventListener("click", handleClickLeft)
+
+console.log(arrowLeft)
+
+function handleClickRight() {
+  if(counter === arrayLength) {
+    counter = 2;
     }
     else {
         counter++;  
@@ -52,8 +59,54 @@ function handleClick() {
     udtalelser.innerHTML = andreUdtalelser[counter];
     navn.innerHTML = andreNavne[counter];
     by.innerHTML = andreByer[counter];
+
+    udtalelser.classList.add("animation")
+    navn.classList.add("animation")
+    by.classList.add("animation")
+
+    arrowLeft.classList.remove("hidden")
+
+    if(counter === 4) {
+      arrowRight.classList.add("hidden")
+    }
+
+    function fadeIn() {
+      var fade = document.getElementById("body");
+      var opacity = 0;
+      var intervalID = setInterval(function() {
+
+          if (opacity < 1) {
+              opacity = opacity + 0.1
+              fade.style.opacity = opacity;
+          } else {
+              clearInterval(intervalID);
+          }
+      }, 200);
+  }
   }
 
 
 
-arrows.forEach(arrow => arrow.addEventListener("click", handleClick))
+  function handleClickLeft() {
+
+  //Virker bedst so far
+  
+    if(lastElementUdtalelser === arrayLength) { 
+      counter = 0;
+      }
+      else if(counter >= 0) {
+        counter--;  
+      }
+        
+      udtalelser.innerHTML = andreUdtalelser[counter];
+      navn.innerHTML = andreNavne[counter];
+      by.innerHTML = andreByer[counter];
+
+    if(counter < 4) {
+      arrowRight.classList.remove("hidden")
+    }
+
+    if(counter === 0) {
+      arrowLeft.classList.add("hidden")
+    }
+  }

@@ -85,6 +85,16 @@ hr {
   }
 }
 
+.animation {
+  animation: fadeIn 2s linear;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+
 .p-info {
   font-weight: bold;
   max-width: 100%;
@@ -123,4 +133,8 @@ button:last-of-type {
   @include breakpoint-up(ipad) {
     right: -60px;
   }
+}
+
+.hidden {
+  display: none;
 }
