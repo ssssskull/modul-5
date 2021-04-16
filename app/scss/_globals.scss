@@ -16,7 +16,9 @@ html {
 }
 
 // Typography
-
+strong {
+  display: block;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -26,7 +28,8 @@ p {
   font-size: $font-xs-fallback;
   font-size: $font-xs;
   line-height: 1.5;
-  @include breakpoint-up(ipad) {
+
+  @include breakpoint-up(computer) {
     font-size: $font-sm-fallback;
     font-size: $font-sm;
   }
@@ -49,18 +52,23 @@ h2 {
   font-size: $font-med-fallback;
   font-size: $font-med;
   margin-bottom: 2rem;
-  @include breakpoint-up(ipad) {
+
+  @include breakpoint-up(computer) {
     font-size: 35px;
     font-size: 3.5rem;
     margin-bottom: 3rem;
   }
 }
 h3 {
-  font-size: $font-sm-fallback;
-  font-size: $font-sm;
+  font-weight: 500;
+  font-size: 20px;
+  font-size: 2rem;
   margin-bottom: 2rem;
-  @include breakpoint-up(ipad) {
+
+  @include breakpoint-up(computer) {
     margin-bottom: 3rem;
+    font-size: $font-med-fallback;
+    font-size: $font-med;
   }
 }
 
@@ -74,11 +82,21 @@ h3 {
   width: max-content;
   margin: 0 auto;
   font-size: 1.4rem;
+  transition: $transition-200ms;
 
   &--outline {
     color: $clr-dawn-pink;
     border: 2px solid $clr-dawn-pink;
     display: none;
+
+    &:hover {
+      background-color: $clr-dawn-pink;
+      color: $clr-text;
+
+      &::before {
+        background-image: url("../../images/icons/phone-black.svg");
+      }
+    }
 
     @include breakpoint-up(computer) {
       display: flex;
@@ -94,6 +112,7 @@ h3 {
     width: 16px;
     height: 16px;
     padding-right: 0.5rem;
+    transition: $transition-200ms;
   }
 
   &--white {
@@ -117,7 +136,7 @@ h3 {
     padding-bottom: 3rem;
     padding-left: 2.4rem;
 
-    @include breakpoint-up(ipad) {
+    @include breakpoint-up(computer) {
       padding-top: 5rem;
       padding-bottom: 5rem;
       padding-left: 4rem;
@@ -129,7 +148,7 @@ h3 {
     padding-top: 3rem;
     padding-bottom: 3rem;
 
-    @include breakpoint-up(ipad) {
+    @include breakpoint-up(computer) {
       padding-top: 6rem;
       padding-bottom: 6rem;
     }
@@ -141,7 +160,7 @@ h3 {
   &--section {
     padding-top: 6rem;
     padding-bottom: 6rem;
-    @include breakpoint-up(ipad) {
+    @include breakpoint-up(computer) {
       padding-top: 14rem;
       padding-bottom: 14rem;
     }

@@ -3,8 +3,8 @@ $font-xs-fallback: 14px;
 $font-xs: 1.4rem;
 $font-sm-fallback: 18px;
 $font-sm: 1.8rem;
-$font-med-fallback: 24px;
-$font-med: 2.4rem;
+$font-med-fallback: 26px;
+$font-med: 2.6rem;
 $font-l-fallback: 30px;
 $font-l: 3rem;
 $font-xl-fallback: 42px;
@@ -19,5 +19,11 @@ $clr-tory-blue: #0e4d92;
 
 $clr-solid-pink: #8e3e4e;
 $clr-dawn-pink: #faf6f4;
+$clr-background-secondary: #f7f7f7;
+$clr-white: #fff;
 
 $clr-text: #5a6175;
+
+// Transitioner
+
+$transition-200ms: all 0.2s ease-in-out;
