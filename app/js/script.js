@@ -37,7 +37,11 @@ const arrowLeft = document.querySelector(".left")
 let udtalelser = document.querySelector(".p-udtalelser");
 let navn = document.querySelector(".navn")
 let by = document.querySelector(".by")
-let andreUdtalelser = ["lorem", "ipsum", "dolor", "sit", "amet"];
+let andreUdtalelser = ["Jeg oplevede det var en udfordring at få hjælp, da jeg har svært ved at tale om det. Derfor blev jeg glad for at se at man kunne selvhenvende sig til et forløb hos region syddanmark. Forløbet har hjulpet mig med at tale om emnet på en god måde.", 
+"Jeg havde ikke store forventninger til forløbet, men det overraskede mig, at jeg blev taget seriøst.", 
+"Jeg har aldrig været god til at snakke om tingene, men forløbet fik mig til at føle mig tryg, når jeg snakkede om mine selvmordstanker.", 
+"Forløbet har hjulpet mig med at håndtere mine selvmordstanker, som kommer når jeg bliver presset.", 
+"Dette forløb har givet mig lysten til at leve samtidig med, at mine ønsker blev accepteret."];
 let andreNavne = ["Maria, 23", "Carsten, 59", "Sille, 19", "Berit, 43", "Emil, 25"]
 let andreByer = ["Odense", "Aabenraa", "Esbjerg", "Fredericia", "Kolding"]
 let lastElementUdtalelser = andreUdtalelser[andreUdtalelser.length - 1];
@@ -47,7 +51,6 @@ let arrayLength = andreUdtalelser.length - 1;
 arrowRight.addEventListener("click", handleClickRight)
 arrowLeft.addEventListener("click", handleClickLeft)
 
-console.log(arrowLeft)
 
 function handleClickRight() {
   if(counter === arrayLength) {
@@ -60,37 +63,20 @@ function handleClickRight() {
     navn.innerHTML = andreNavne[counter];
     by.innerHTML = andreByer[counter];
 
-    // udtalelser.classList.add("animation")
-    // navn.classList.add("animation")
-    // by.classList.add("animation")
-
     arrowLeft.classList.remove("hidden")
 
     if(counter === 4) {
       arrowRight.classList.add("hidden")
     }
 
-    function fadeIn() {
-      var fade = document.getElementById("body");
-      var opacity = 0;
-      var intervalID = setInterval(function() {
-
-          if (opacity < 1) {
-              opacity = opacity + 0.1
-              fade.style.opacity = opacity;
-          } else {
-              clearInterval(intervalID);
-          }
-      }, 200);
-  }
+      // udtalelser.classList.add("animation") 
+      // by.classList.add("animation")
+      // navn.classList.add("animation")
   }
 
 
 
   function handleClickLeft() {
-
-  //Virker bedst so far
-  
     if(lastElementUdtalelser === arrayLength) { 
       counter = 0;
       }
