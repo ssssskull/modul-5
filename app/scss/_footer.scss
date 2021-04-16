@@ -1,0 +1,147 @@
+.footer {
+  color: $clr-dawn-pink;
+  padding-bottom: 6rem;
+
+  h2 {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__applogo {
+    display: block;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    background-image: url("../../images/minplan.png");
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin: 0 auto 5.5rem auto;
+    transition: $transition-200ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @include breakpoint-up(ipad) {
+      margin: 0 6rem 0 0;
+      height: 95px;
+      width: 95px;
+    }
+  }
+  &__container {
+    text-align: center;
+    margin: 4rem auto 6rem auto;
+
+    @include breakpoint-up(ipad) {
+      flex-direction: row;
+      text-align: unset;
+
+      div {
+        max-width: 60%;
+      }
+    }
+  }
+
+  &__logos {
+    @include breakpoint-up(ipad) {
+      flex-direction: row;
+    }
+  }
+  // TODO undersøg alignment her med download ikoner og min plan
+  &__storelogo {
+    display: block;
+    height: 60px;
+    width: 175px;
+    background-image: url("../../images/googleplaystore-badge.svg");
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    transition: $transition-200ms;
+
+    @include breakpoint-up(ipad) {
+      width: 200px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:last-child {
+      background-image: url("../../images/appstore-badge.svg");
+      width: 175px;
+      margin-top: 2rem;
+
+      @include breakpoint-up(ipad) {
+        margin-top: unset;
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &__hr {
+    border-top: solid $clr-dawn-pink 1px;
+    width: 100%;
+    margin: 6rem 0;
+
+    @include breakpoint-up(computer) {
+      margin: 14rem 0 6rem 0;
+    }
+  }
+
+  &__links {
+    width: 100%;
+    font-size: $font-sm-fallback;
+    font-size: $font-sm;
+    font-weight: 500;
+
+    a {
+      display: inline-block;
+    }
+
+    div:last-child {
+      flex-direction: row;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .flex a:first-child {
+      margin: 2rem 0;
+
+      @include breakpoint-up(ipad) {
+        margin: 0 2rem 0 0;
+      }
+
+      @include breakpoint-up(computer) {
+        margin: 0 5.5rem 0 0;
+      }
+    }
+
+    @include breakpoint-up(ipad) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__some {
+    display: block;
+    height: 45px;
+    width: 45px;
+    background-image: url("../../images/icons/facebook.svg");
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    transition: $transition-200ms;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:nth-of-type(2) {
+      background-image: url("../../images/icons/instagram.svg");
+      margin-left: 2rem;
+    }
+  }
+}
