@@ -105,7 +105,6 @@ function handleClickLeft() {
     arrowLeft.classList.add("hidden");
   }
 }
-/*
 
 // Jakob
 
@@ -116,6 +115,10 @@ const links = document.querySelectorAll(".links");
 // Derefter returnerer vi alle elementer med sektion tags of laver nodelisten om til en array
 // Så vi kan benytte de metoder array har, som splice.
 const sections = Array.from(document.querySelectorAll("section"));
+
+// Fjerner den sidste element fra arrayet, da der ikke findes en
+// footer element i nav, og dermed ville der være 1 for mange sektioner ift links.
+sections.pop();
 
 // Splice fjernen et specifikt element, og den har to parametre:
 // Den første parameter er index af det element vi vil fjerne
@@ -159,4 +162,3 @@ changeLinkState();
 // I dette tilfælde er vores event type scroll - dvs. funktionen
 // kører hver gang brugeren scroller
 window.addEventListener("scroll", changeLinkState);
-*/
