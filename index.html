@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/mro3ydc.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
   </head>
   <body>
     <div class="splash">
@@ -113,12 +115,17 @@
         <div class="hero__title container">
           <h1>Tag hånd om din situation</h1>
         </div>
-        <div class="hero__content container">
-          <p>
+        <div
+          class="hero__content container"
+          itemscope
+          itemtype="https://schema.org/Service"
+          provider
+        >
+          <p itemprop="slogan">
             Vi ved, at tiden efter et selvmordsforsøg kan være præget af
             håbløshed og utryghed, hvor en løsning kan være svær at få øje på.
           </p>
-          <p>
+          <p itemprop="description">
             Derfor tilbyder vi samtaler, rådgivning og støtte, så din situation
             kan forbedres.
           </p>
@@ -132,7 +139,7 @@
         </div>
       </div>
       <div class="hero__scroll flex flex-ai-c flex-jc-c">
-        <a href="#main"></a>
+        <a href="#main" title="Scroll til main sektionen"></a>
       </div>
     </section>
     <main id="main">
@@ -142,7 +149,13 @@
         id="om-os"
       >
         <h2>Lær os at kende</h2>
-        <img src="images/berorte.svg" class="teamet" alt="Teamet" />
+        <img
+          src="images/Team-for-Selvmordsforebyggelse-Lær-os-at-kende-illustration.svg"
+          class="teamet"
+          alt="Team for Selvmordsforebyggelse - Lær os at kende illustration"
+          height="300"
+          width="850"
+        />
         <p>
           Hos Team for Selvmordsforebyggelse brænder vi for at lytte til og
           drage omsorg for selvmordstruede. Vi vil hjælpe dig med at finde en
@@ -167,7 +180,13 @@
           kan give dig midler og værktøjer til at håndtere dem.
         </p>
 
-        <img src="images/hander.svg" class="abouthands" alt="Hands" />
+        <img
+          src="images/Team-for-Selvmordsforebyggelse-Om-forløbet-illustration.svg"
+          class="abouthands"
+          alt="Team for Selvmordsforebyggelse - Om forløbet illustration"
+          height="300"
+          width="850"
+        />
 
         <h3>Kan du bruge forløbet?</h3>
         <p>
@@ -252,6 +271,7 @@
           <a
             href="https://mindapps.dk/apps/minplan-elektronisk-kriseplan/"
             class="footer__applogo"
+            title="Minplan app"
           ></a>
           <div>
             <p>Med MinPlan-appen har du altid hjælp ved hånden.</p>
@@ -264,13 +284,15 @@
         <div class="footer__logos flex flex-dr-cl flex-ai-st">
           <a
             class="footer__storelogo"
-            alt="Get it on Google Play"
+            alt="Hent på Google Play Storen"
             href="https://play.google.com/store/apps/details?id=dk.minplan.controllers&hl=en_IE&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            title="Hent Min Plan på Google Play Storen"
           ></a
           ><a
             class="footer__storelogo"
-            alt="Get it on App Store"
+            alt="Hent på App Storen"
             href="https://apps.apple.com/dk/app/minplan-danmark/id882593683?l=da"
+            title="Hent Min Plan på App Storen"
           ></a>
         </div>
         <hr class="footer__hr" />
@@ -278,8 +300,8 @@
           class="footer__links container flex flex-ai-st flex-jc-sb flex-dr-cl"
         >
           <div>
-            <a href="#" class="footer__some"></a>
-            <a href="#" class="footer__some"></a>
+            <a href="#" class="footer__some" title="Find os på Facebook"></a>
+            <a href="#" class="footer__some" title="Find os på Instagram"></a>
           </div>
 
           <div class="flex flex-dr-cl">

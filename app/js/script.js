@@ -2,6 +2,8 @@
 
 // Daniel
 
+// ------- Hamburger menu
+
 const btnHamburger = document.querySelector("#btnHamburger");
 const header = document.querySelector("header");
 const overlay = document.querySelector(".overlay");
@@ -18,6 +20,8 @@ btnHamburger.addEventListener("click", function () {
     body.style.overflow = "hidden";
   }
 });
+
+// ------- Hide on scroll
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 let prevScrollpos = window.pageYOffset;

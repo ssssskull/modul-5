@@ -1,3 +1,4 @@
+const textContainer = document.querySelector(".fade-in");
 const splash = document.querySelector(".splash");
 
 const udtalelserArray = [
@@ -9,12 +10,13 @@ const udtalelserArray = [
 ];
 
 const random = Math.floor(Math.random() * udtalelserArray.length);
-console.log(random, udtalelserArray[random]);
 
+textContainer.innerHTML = udtalelserArray[random];
 // DOMcontentLoaded -- affyrer funktionen når DOMmen er færdig med at loade
 window.addEventListener("DOMContentLoaded", function () {
+  body.style.overflow = "hidden";
   setTimeout(function () {
-    console.log("DOM fully loaded and parsed");
     splash.classList.add("display-none");
+    body.style.overflow = "auto";
   }, 1500);
 });
