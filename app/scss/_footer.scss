@@ -97,6 +97,7 @@
 
     a {
       display: inline-block;
+      transition: $transition-200ms;
     }
 
     div:last-child {

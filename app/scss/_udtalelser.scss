@@ -1,5 +1,5 @@
 .udtalelser {
-  background-color: $clr-dawn-pink;
+  background-color: $clr-white;
 }
 
 .widthcontainer {
@@ -90,24 +90,27 @@ hr {
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0}
-  100% {opacity: 1}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 
 .p-info {
   font-weight: bold;
   max-width: 100%;
 }
 
-
 .arrow {
   font-size: 3rem;
   border: none;
-  background-color: $clr-dawn-pink;
+  background: none;
   color: $clr-text;
   position: absolute;
   bottom: 50%;
+  cursor: pointer;
 
   @include breakpoint-up(ipad) {
     font-size: 4rem;
