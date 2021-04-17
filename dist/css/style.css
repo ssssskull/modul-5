@@ -100,14 +100,14 @@ h3 {
   width: max-content;
   margin: 0 auto;
   font-size: 1.4rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 .cta-secondary--outline {
   color: #faf6f4;
   border: 2px solid #faf6f4;
   display: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .cta-secondary--outline:hover {
@@ -136,19 +136,21 @@ h3 {
   width: 16px;
   height: 16px;
   padding-right: 0.5rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 .cta-secondary--white {
   background-color: #faf6f4;
   color: #5a6175;
   font-weight: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .cta-secondary--white::before {
   background-image: url("../../images/icons/phone-black.svg");
   padding-right: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .container {
@@ -298,14 +300,15 @@ h3 {
 .header__right li a {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  border: transparent;
 }
 
 .header__right li a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #faf6f4;
 }
 
 .header__right .active {
-  text-decoration: underline;
+  border-bottom: 1px solid #faf6f4;
 }
 
 .header__toggle {
@@ -401,6 +404,8 @@ h3 {
   left: 0px;
   background-color: #000;
   z-index: -1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .hero {
@@ -414,7 +419,7 @@ h3 {
   text-align: center;
   height: 92vh;
   width: 100%;
-  background-image: url("../../images/Region-Syddanmark-hero-baggrund.svg");
+  background-image: url("../../images/Team-for-Selvmordsforebyggelse-baggrund.svg");
   background-position: center center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -558,6 +563,7 @@ main img {
 }
 
 .widthcontainer {
+  max-width: 850px;
   width: 65%;
   position: relative;
 }
@@ -605,7 +611,7 @@ hr {
 }
 
 .anforsel {
-  background-image: url("../../images/quote.svg");
+  background-image: url("../../images/Quote-graphical-element.svg");
   background-position: center center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -814,7 +820,7 @@ button:last-of-type {
   text-align: center;
   height: 80px;
   width: 80px;
-  background-image: url("../../images/minplan.png");
+  background-image: url("../../images/Minplan-app-icon.png");
   background-position: center center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -918,6 +924,7 @@ button:last-of-type {
 
 .footer__links a {
   display: inline-block;
+  border: transparent;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -930,7 +937,7 @@ button:last-of-type {
 }
 
 .footer__links div:last-child a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #faf6f4;
 }
 
 .footer__links .flex a:first-child {

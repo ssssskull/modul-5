@@ -12,7 +12,7 @@
     text-align: center;
     height: 80px;
     width: 80px;
-    background-image: url("../../images/minplan.png");
+    background-image: url("../../images/Minplan-app-icon.png");
     background-position: center center;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@
       flex-direction: row;
     }
   }
-  // TODO undersøg alignment her med download ikoner og min plan
+
   &__storelogo {
     display: block;
     height: 60px;
@@ -97,6 +97,7 @@
 
     a {
       display: inline-block;
+      border: transparent;
       transition: $transition-200ms;
     }
 
@@ -104,7 +105,7 @@
       flex-direction: row;
 
       a:hover {
-        text-decoration: underline;
+        border-bottom: 1px solid $clr-dawn-pink;
       }
     }
 

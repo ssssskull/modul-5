@@ -82,12 +82,12 @@ h3 {
   width: max-content;
   margin: 0 auto;
   font-size: 1.4rem;
-  transition: $transition-200ms;
 
   &--outline {
     color: $clr-dawn-pink;
     border: 2px solid $clr-dawn-pink;
     display: none;
+    transition: $transition-200ms;
 
     &:hover {
       background-color: $clr-dawn-pink;
@@ -112,16 +112,18 @@ h3 {
     width: 16px;
     height: 16px;
     padding-right: 0.5rem;
-    transition: $transition-200ms;
   }
 
   &--white {
     background-color: $clr-dawn-pink;
     color: $clr-text;
     font-weight: 500;
+    transition: $transition-200ms;
+
     &::before {
       background-image: url("../../images/icons/phone-black.svg");
       padding-right: 1rem;
+      transition: $transition-200ms;
     }
   }
 }

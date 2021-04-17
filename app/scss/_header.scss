@@ -39,14 +39,15 @@
 
       a {
         transition: $transition-200ms;
+        border: transparent;
 
         &:hover {
-          text-decoration: underline;
+          border-bottom: 1px solid $clr-dawn-pink;
         }
       }
     }
     .active {
-      text-decoration: underline;
+      border-bottom: 1px solid $clr-dawn-pink;
     }
   }
 
@@ -146,6 +147,7 @@
       left: 0px;
       background-color: #000;
       z-index: -1;
+      transition: $transition-200ms;
     }
   }
 }
