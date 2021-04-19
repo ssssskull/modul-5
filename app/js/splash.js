@@ -8,4 +8,5 @@ window.addEventListener("DOMContentLoaded", function () {
     splash.classList.add("display-none");
     body.style.overflow = "auto";
   }, 1500);
+  // BUG fix transition
 });

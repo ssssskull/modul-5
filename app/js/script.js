@@ -53,7 +53,7 @@ let andreUdtalelser = [
 let andreNavne = [
   "Maria, 23",
   "Carsten, 59",
-  "Sille, 19",
+  "Sille, 23",
   "Berit, 43",
   "Emil, 25",
 ];

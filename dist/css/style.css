@@ -99,7 +99,8 @@ h3 {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
-  font-size: 1.4rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .cta-secondary--outline {
@@ -255,9 +256,7 @@ h3 {
 .header {
   background-color: #8e3e4e;
   position: fixed;
-  /* Make it stick/fixed */
   top: 0;
-  /* Stay on top */
   width: 100%;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
@@ -750,8 +749,6 @@ button:last-of-type {
   display: grid;
   -ms-grid-columns: 45% 45%;
       grid-template-columns: 45% 45%;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

@@ -1,7 +1,7 @@
 .header {
   background-color: $clr-solid-pink;
-  position: fixed; /* Make it stick/fixed */
-  top: 0; /* Stay on top */
+  position: fixed;
+  top: 0;
   width: 100%;
   transition: top 0.3s;
   z-index: 99;

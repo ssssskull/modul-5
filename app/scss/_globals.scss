@@ -81,7 +81,8 @@ h3 {
   color: $clr-dawn-pink;
   width: max-content;
   margin: 0 auto;
-  font-size: 1.4rem;
+  font-size: $font-sm-fallback;
+  font-size: $font-sm;
 
   &--outline {
     color: $clr-dawn-pink;
