@@ -746,13 +746,18 @@ button:last-of-type {
 
 .kontakt__container {
   margin-top: 2rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 45% 45%;
-      grid-template-columns: 45% 45%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+@media (min-width: 28.125em) {
+  .kontakt__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 45% 45%;
+        grid-template-columns: 45% 45%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .kontakt__griditem1 {

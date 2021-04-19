@@ -1,13 +1,15 @@
 .kontakt {
-  // BUG kontakt indhold løber udenfor skærmen på små skærme
   background: $clr-dawn-pink;
   text-align: left;
 
   &__container {
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 45% 45%;
-    justify-content: space-between;
+
+    @include breakpoint-up(iphone) {
+      display: grid;
+      grid-template-columns: 45% 45%;
+      justify-content: space-between;
+    }
   }
 
   &__griditem1 {
