@@ -936,10 +936,22 @@ button:last-of-type {
 }
 
 .footer__links div:last-child {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  margin-top: 3rem;
+}
+
+@media (min-width: 40em) {
+  .footer__links div:last-child {
+    margin-top: unset;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__links div:last-child {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .footer__links div:last-child a:hover {
@@ -947,13 +959,7 @@ button:last-of-type {
 }
 
 .footer__links .flex a:first-child {
-  margin: 2rem 0;
-}
-
-@media (min-width: 40em) {
-  .footer__links .flex a:first-child {
-    margin: 0 2rem 0 0;
-  }
+  margin: 0 0 2rem 0;
 }
 
 @media (min-width: 64em) {
