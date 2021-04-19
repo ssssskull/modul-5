@@ -22,7 +22,7 @@
   margin-bottom: 2rem;
 
   @include breakpoint-up(ipad) {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   @include breakpoint-up(computer) {
@@ -52,10 +52,10 @@ hr {
 }
 
 .udtalelsercontainer {
-  margin-bottom: 3.4rem;
+  margin-bottom: 2rem;
 
   @include breakpoint-up(ipad) {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   @include breakpoint-up(computer) {
@@ -76,13 +76,11 @@ hr {
   @include breakpoint-up(computer) {
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 6rem;
   }
 
   @include breakpoint-up(largeComputer) {
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 6rem;
   }
 }
 

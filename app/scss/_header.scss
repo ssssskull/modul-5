@@ -5,6 +5,7 @@
   width: 100%;
   transition: top 0.3s;
   z-index: 99;
+  letter-spacing: normal;
 
   nav {
     font-size: $font-sm-fallback;
@@ -42,12 +43,12 @@
         border: transparent;
 
         &:hover {
-          border-bottom: 1px solid $clr-dawn-pink;
+          border-bottom: 2px solid $clr-dawn-pink;
         }
       }
     }
     .active {
-      border-bottom: 1px solid $clr-dawn-pink;
+      border-bottom: 2px solid $clr-dawn-pink;
     }
   }
 

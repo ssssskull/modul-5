@@ -44,7 +44,7 @@ let udtalelser = document.querySelector(".p-udtalelser");
 let navn = document.querySelector(".navn");
 let by = document.querySelector(".by");
 let andreUdtalelser = [
-  "Jeg blev glad for at se, at man kunne selvhenvende sig til et forløb hos region syddanmark. Forløbet har hjulpet mig med at tale om emnet på en god måde.",
+  "Jeg blev glad for at se, at man kunne selvhenvende sig til et forløb hos Region Syddanmark. Forløbet har hjulpet mig med at tale om emnet på en god måde.",
   "Jeg havde ikke store forventninger til forløbet, men det overraskede mig, at jeg blev taget seriøst.",
   "Jeg har aldrig været god til at snakke om tingene, men forløbet fik mig til at føle mig tryg, når jeg snakkede om mine selvmordstanker.",
   "Forløbet har hjulpet mig med at håndtere mine selvmordstanker, som kommer når jeg bliver presset.",

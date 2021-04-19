@@ -13,6 +13,7 @@ html {
   background-color: $clr-solid-pink;
   font-size: 62.5%;
   font-family: interstate, sans-serif;
+  letter-spacing: 1.2px;
 }
 
 // Typography
@@ -142,8 +143,8 @@ h3 {
     @include breakpoint-up(computer) {
       padding-top: 5rem;
       padding-bottom: 5rem;
-      padding-left: 4rem;
-      padding-right: 4rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
     }
   }
 
