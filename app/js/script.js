@@ -1,13 +1,25 @@
 "use strict";
+// Tharshika
+// ------- Splash screen
+const textContainer = document.querySelector(".fade-in");
+const splash = document.querySelector(".splash");
+const body = document.querySelector("body");
+
+// DOMcontentLoaded -- affyrer funktionen når DOMmen er færdig med at loade
+window.addEventListener("DOMContentLoaded", function () {
+  body.style.overflow = "hidden";
+  setTimeout(function () {
+    splash.classList.add("display-none");
+    body.style.overflow = "auto";
+  }, 1500);
+});
 
 // Daniel
-
 // ------- Hamburger menu
 
 const btnHamburger = document.querySelector("#btnHamburger");
 const header = document.querySelector("header");
 const overlay = document.querySelector(".overlay");
-const body = document.querySelector("body");
 
 btnHamburger.addEventListener("click", function () {
   if (header.classList.contains("open")) {
@@ -36,7 +48,8 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-/* Skift tekst i udtalelser */
+// Frederikke
+// ------- Udtalelser
 
 const arrowRight = document.querySelector(".right");
 const arrowLeft = document.querySelector(".left");
@@ -107,6 +120,7 @@ function handleClickLeft() {
 }
 
 // Jakob
+// ------- Aktiv link navigation
 
 // Her bruger vi en queryselector der returnerer alle vores links som en nodelist.
 // Den returnerer alle elementer med links klassen.

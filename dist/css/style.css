@@ -254,6 +254,67 @@ h3 {
   }
 }
 
+@-webkit-keyframes splashFade {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes splashFade {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #8e3e4e;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.display-none {
+  z-index: -99;
+  opacity: 0;
+  -webkit-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: splashFade 0.75s ease-in forwards;
+          animation: splashFade 0.75s ease-in forwards;
+  height: 50%;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-image: url("../../images/Region-Syddanmark-logo.svg");
+  background-size: 100% 100%;
+}
+
 .header {
   background-color: #8e3e4e;
   position: fixed;
@@ -421,7 +482,7 @@ h3 {
   height: 92vh;
   width: 100%;
   background-image: url("../../images/Team-for-Selvmordsforebyggelse-baggrund.svg");
-  background-position: center center;
+  background-position: top 44% center;
   background-size: 100% auto;
   background-repeat: no-repeat;
   padding-top: 7.4rem;
@@ -429,7 +490,8 @@ h3 {
 
 @media (min-width: 40em) {
   .hero__container {
-    background-size: 70% auto;
+    background-position: center center;
+    padding-bottom: 5rem;
   }
 }
 
@@ -442,6 +504,7 @@ h3 {
     padding-top: 8rem;
     background-size: 45% auto;
     background-position: right 70%;
+    padding-bottom: unset;
   }
 }
 
@@ -468,8 +531,14 @@ h3 {
 }
 
 .hero__title {
-  padding-top: 5rem;
+  padding-top: 3rem;
   width: 100%;
+}
+
+@media (min-width: 40em) {
+  .hero__title {
+    padding-top: 5rem;
+  }
 }
 
 .hero__content {

@@ -9,13 +9,14 @@
     height: 92vh;
     width: 100%;
     background-image: url("../../images/Team-for-Selvmordsforebyggelse-baggrund.svg");
-    background-position: center center;
+    background-position: top 44% center;
     background-size: 100% auto;
     background-repeat: no-repeat;
     padding-top: 7.4rem;
 
     @include breakpoint-up(ipad) {
-      background-size: 70% auto;
+      background-position: center center;
+      padding-bottom: 5rem;
     }
 
     @include breakpoint-up(computer) {
@@ -24,6 +25,7 @@
       padding-top: 8rem;
       background-size: 45% auto;
       background-position: right 70%;
+      padding-bottom: unset;
     }
 
     p:last-of-type {
@@ -45,9 +47,14 @@
     }
   }
   &__title {
-    padding-top: 5rem;
+    padding-top: 3rem;
     width: 100%;
+
+    @include breakpoint-up(ipad) {
+      padding-top: 5rem;
+    }
   }
+
   &__content {
     width: 100%;
 
