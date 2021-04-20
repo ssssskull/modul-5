@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", function () {
 const btnHamburger = document.querySelector("#btnHamburger");
 const header = document.querySelector("header");
 const overlay = document.querySelector(".overlay");
-
+console.log(typeof btnHamburger);
 btnHamburger.addEventListener("click", function () {
   if (header.classList.contains("open")) {
     // Luk Hamburger Menu
@@ -223,11 +223,10 @@ pensumObjektJakob.ownerOfPS5 = "ja";
 console.log(pensumObjektJakob);
 
 // If else
-const x = 7;
+const xMan = 7;
 
-if (x === 7) {
+if (xMan === 7) {
   console.log("x er lige med 7");
 } else {
   console.log("x ikke er lige med 7");
 }
-
