@@ -815,10 +815,12 @@ button:last-of-type {
 
 .kontakt__container {
   margin-top: 2rem;
+  text-align: center;
 }
 
 @media (min-width: 28.125em) {
   .kontakt__container {
+    text-align: unset;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 45% 45%;
@@ -879,6 +881,13 @@ button:last-of-type {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
+  margin-top: 2rem;
+}
+
+@media (min-width: 28.125em) {
+  .kontakt__griditem5 {
+    margin-top: unset;
+  }
 }
 
 .kontakt__bottom {

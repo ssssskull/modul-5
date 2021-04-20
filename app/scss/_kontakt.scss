@@ -4,8 +4,9 @@
 
   &__container {
     margin-top: 2rem;
-
+    text-align: center;
     @include breakpoint-up(iphone) {
+      text-align: unset;
       display: grid;
       grid-template-columns: 45% 45%;
       justify-content: space-between;
@@ -41,6 +42,10 @@
   &__griditem5 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    margin-top: 2rem;
+    @include breakpoint-up(iphone) {
+      margin-top: unset;
+    }
   }
   &__bottom {
     margin-bottom: 2em;
