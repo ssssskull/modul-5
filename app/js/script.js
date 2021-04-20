@@ -207,3 +207,27 @@ console.log(pensumArrayDaniel.length);
 for (let y = 0; y < pensumArrayDaniel.length; y++) {
   console.log("Daniels forloop!");
 }
+
+// ------ Jakob
+
+// Objekt
+const pensumObjektJakob = {
+  PS5: "Scalpers",
+  Projekt: "Godt",
+  Toast: "God smag",
+};
+console.log(pensumObjektJakob);
+
+pensumObjektJakob.ownerOfPS5 = "ja";
+
+console.log(pensumObjektJakob);
+
+// If else
+const x = 7;
+
+if (x === 7) {
+  console.log("x er lige med 7");
+} else {
+  console.log("x ikke er lige med 7");
+}
+
