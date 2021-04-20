@@ -35,19 +35,17 @@ btnHamburger.addEventListener("click", function () {
 
 // Daniel
 // ------- Hide on scroll
+let prevScrollPos = window.pageYOffset;
 
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-let prevScrollpos = window.pageYOffset;
-
-window.onscroll = function () {
+window.addEventListener("scroll", function () {
   let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollPos > currentScrollPos) {
     header.style.top = "0";
   } else {
     header.style.top = `-${header.clientHeight}px`;
   }
-  prevScrollpos = currentScrollPos;
-};
+  prevScrollPos = currentScrollPos;
+});
 
 // Frederikke
 // ------- Udtalelser
