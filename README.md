@@ -6,7 +6,7 @@ Formålet for dette projekt at du kan designe og programmere digitale indholds-l
 
 ## Kontakt os:
 
-- [Frederikke Bomberg Mathiesen](https://www.linkedin.com/in/frederikke-bomberg-mathiesen-a406b51b6/)
-- [Tharshika Jeyakumar](https://www.linkedin.com/in/frederikke-bomberg-mathiesen-a406b51b6/)
-- [Jakob Larsen](https://www.linkedin.com/in/jakob%2Dlarsen%2D4867871b6/)
-- [Daniel Janos Papp](https://www.linkedin.com/in/daniel-janos-papp-22013b152/)
+- [Frederikke Bomberg Mathiesen](https://www.linkedin.com/in/frederikke-bomberg-mathiesen-a406b51b6/){:target="\_blank"}
+- [Tharshika Jeyakumar](https://www.linkedin.com/in/frederikke-bomberg-mathiesen-a406b51b6/){:target="\_blank"}
+- [Jakob Larsen](https://www.linkedin.com/in/jakob%2Dlarsen%2D4867871b6/){:target="\_blank"}
+- [Daniel Janos Papp](https://www.linkedin.com/in/daniel-janos-papp-22013b152/){:target="\_blank"}
