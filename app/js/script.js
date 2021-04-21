@@ -4,6 +4,7 @@
 const textContainer = document.querySelector(".fade-in");
 const splash = document.querySelector(".splash");
 const body = document.querySelector("body");
+const header = document.querySelector("header");
 
 // DOMcontentLoaded -- affyrer funktionen når DOMmen er færdig med at loade
 window.addEventListener("DOMContentLoaded", function () {
@@ -15,12 +16,27 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 // Daniel
+// ------- Hide on scroll
+
+let prevScrollPos = window.pageYOffset;
+
+window.addEventListener("scroll", function () {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    header.style.top = "0";
+  } else if (header.classList.contains("open")) {
+    header.style.top = "0";
+  } else {
+    header.style.top = `-${header.clientHeight}px`;
+  }
+  prevScrollPos = currentScrollPos;
+});
+
+// Daniel
 // ------- Hamburger menu
 
 const btnHamburger = document.querySelector("#btnHamburger");
-const header = document.querySelector("header");
 const overlay = document.querySelector(".overlay");
-console.log(typeof btnHamburger);
 btnHamburger.addEventListener("click", function () {
   if (header.classList.contains("open")) {
     // Luk Hamburger Menu
@@ -31,20 +47,6 @@ btnHamburger.addEventListener("click", function () {
     header.classList.add("open");
     body.style.overflow = "hidden";
   }
-});
-
-// Daniel
-// ------- Hide on scroll
-let prevScrollPos = window.pageYOffset;
-
-window.addEventListener("scroll", function () {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollPos > currentScrollPos) {
-    header.style.top = "0";
-  } else {
-    header.style.top = `-${header.clientHeight}px`;
-  }
-  prevScrollPos = currentScrollPos;
 });
 
 // Frederikke
@@ -112,12 +114,6 @@ function handleClickLeft() {
   }
 }
 
-let i = 0;
-
-for (i = 0; i < 1; i++) {
-  console.log("Hej smukke");
-}
-
 // Jakob
 
 // ------- Variabel til videoen
@@ -140,91 +136,3 @@ function changeLinkState() {
 
 changeLinkState();
 window.addEventListener("scroll", changeLinkState);
-
-/*----------------------
-------- Pensum --------
-------------------------*/
-
-// ------ Tharshika
-
-// Array
-const pensumArrayTharshika = ["Thomas", "sej", "er han ikke?"];
-pensumArrayTharshika.unshift("Hest!");
-
-// Debugging
-console.log(pensumArrayTharshika);
-
-// Objekt
-const pensumObjektTharshika = {
-  by: "Odense",
-  cykel: "nej!",
-  applewatch: "JAAA",
-};
-console.log(pensumObjektTharshika);
-
-pensumObjektTharshika.tired = "yes";
-
-console.log(pensumObjektTharshika);
-
-// If else
-const x = 2;
-
-if (x === 2) {
-  console.log("x er lige med 2");
-} else {
-  console.log("x ikke er lige med 2");
-}
-
-// For loop
-for (let i = 0; i < pensumArrayTharshika.length; i++) {
-  console.log("Tharshikas forloop!");
-}
-
-// ------ Daniel
-
-// Array
-const pensumArrayDaniel = ["🚗", "🚓", "🚕"];
-pensumArrayDaniel.splice(1, 1);
-console.log(pensumArrayDaniel);
-// Array er også et objekt, men jeg vælger at lave et alligevel
-
-// Objekt
-const pensumObjektDaniel = {
-  speed: "fast",
-  food: "none",
-};
-
-// Debugging
-console.log(pensumObjektDaniel);
-pensumObjektDaniel.tired = "very :(";
-console.log(pensumObjektDaniel);
-
-console.log(pensumArrayDaniel.length);
-// For loop
-
-for (let y = 0; y < pensumArrayDaniel.length; y++) {
-  console.log("Daniels forloop!");
-}
-
-// ------ Jakob
-
-// Objekt
-const pensumObjektJakob = {
-  PS5: "Scalpers",
-  Projekt: "Godt",
-  Toast: "God smag",
-};
-console.log(pensumObjektJakob);
-
-pensumObjektJakob.ownerOfPS5 = "ja";
-
-console.log(pensumObjektJakob);
-
-// If else
-const xMan = 7;
-
-if (xMan === 7) {
-  console.log("x er lige med 7");
-} else {
-  console.log("x ikke er lige med 7");
-}
