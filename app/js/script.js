@@ -1,10 +1,28 @@
 "use strict";
+// Jakob
+// ------- Aktiv link navigation
+
+const links = document.querySelectorAll(".links");
+const sections = Array.from(document.querySelectorAll("section"));
+sections.pop();
+sections.splice(2, 1);
+
+function changeLinkState() {
+  let index = sections.length;
+
+  while (--index && window.scrollY + 90 < sections[index].offsetTop) {}
+  links.forEach((link) => link.classList.remove("active"));
+  links[index].classList.add("active");
+}
+
+changeLinkState();
+window.addEventListener("scroll", changeLinkState);
+
 // Tharshika
 // ------- Splash screen
 const textContainer = document.querySelector(".fade-in");
 const splash = document.querySelector(".splash");
 const body = document.querySelector("body");
-const header = document.querySelector("header");
 
 // DOMcontentLoaded -- affyrer funktionen når DOMmen er færdig med at loade
 window.addEventListener("DOMContentLoaded", function () {
@@ -18,6 +36,7 @@ window.addEventListener("DOMContentLoaded", function () {
 // Daniel
 // ------- Hide on scroll
 
+const header = document.querySelector("header");
 let prevScrollPos = window.pageYOffset;
 
 window.addEventListener("scroll", function () {
@@ -113,26 +132,3 @@ function handleClickLeft() {
     arrowLeft.classList.add("hidden");
   }
 }
-
-// Jakob
-
-// ------- Variabel til videoen
-const omOs = document.querySelector("#om-os");
-
-// ------- Aktiv link navigation
-
-const links = document.querySelectorAll(".links");
-const sections = Array.from(document.querySelectorAll("section"));
-sections.pop();
-sections.splice(2, 1);
-
-function changeLinkState() {
-  let index = sections.length;
-
-  while (--index && window.scrollY + 90 < sections[index].offsetTop) {}
-  links.forEach((link) => link.classList.remove("active"));
-  links[index].classList.add("active");
-}
-
-changeLinkState();
-window.addEventListener("scroll", changeLinkState);
